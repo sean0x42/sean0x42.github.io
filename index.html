@@ -5,6 +5,8 @@
         <title>Sean Bailey</title>
 
         <link href="https://fonts.googleapis.com/css?family=Merriweather:700|Roboto" rel="stylesheet">
+        <meta name="theme-color" content="#1C1C1C" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 
         <style>
             body {
@@ -33,13 +35,45 @@
                 font-family: 'Roboto', sans-serif;
                 font-size: 4vh;
             }
+
+            .copyright {
+                position: absolute;
+                bottom: 0;
+                font-size: 13px;
+                padding: 1rem;
+                left:  0;
+                right: 0;
+                text-align: center;
+                line-height: 1.4;
+            }
+
+            .social {
+                position: absolute;
+                top: 0;
+                right: 0;
+                padding: 0.75rem;
+            }
+
+            .social img {
+                padding: 0.75rem;
+                width: 30px;
+                height: 30px;
+            }
         </style>
     </head>
     <body>
+
+        <div class="social">
+            <a href="https://github.com/LuckehPickle/" >
+                <img src="github.png" alt="GitHub">
+            </a>
+        </div>
         
         <p class="text"></p>
 
         <span>Hint: Reload</span>
+
+        <span class="copyright">This site is under construction! Copyright 2017 - Sean Bailey All Rights Reserved.</span>
 
         <script>
 
@@ -81,7 +115,19 @@
                 "bicycle",
                 "pillow",
                 "sausage",
-                "pasta"
+                "pasta",
+                "grandpa",
+                "grandma"
+            ];
+
+            var colors = [
+                "#F39C12",
+                "#239B56",
+                "#2E86C1",
+                "#E74C3C",
+                "#2C3E50",
+                "#8E44AD",
+                "#2ECC71"
             ];
             
             /**
@@ -106,32 +152,13 @@
 
                 // Set random background color
                 var body = document.querySelector("body");
-                body.style.background = randomColor();
+                body.style.background = randomWord(colors);
 
                 // Set random content
                 var text = document.querySelector(".text");
                 text.innerHTML = randomWord(adjectives) + " " + randomWord(nouns);
 
             });
-
-
-            /**
-             * Random color
-             * @return A random Hex color.
-             */
-            function randomColor () {
-                
-                var symbols = '0123456789ABCDEF';
-                var color = '#';
-
-                for (var i = 0; i < 6; i++) {
-                    color += symbols[Math.floor(Math.random() * 16)];
-                }
-
-                console.log(color);
-                return color;
-
-            }
 
 
             /**
