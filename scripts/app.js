@@ -76,7 +76,7 @@ ready(function () {
 
         text.innerHTML = randomItem(adjectives) + " " + randomItem(nouns);
 
-        var theme;
+        /*var theme;
 
         // Keep randomizing until a different theme is returned.
         do {
@@ -84,7 +84,7 @@ ready(function () {
         } while (theme == currentTheme);
 
         body.setAttribute("data-theme", theme);
-        currentTheme = theme;
+        currentTheme = theme;*/
 
     };
 
