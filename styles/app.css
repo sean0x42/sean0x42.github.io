@@ -1,0 +1,165 @@
+body {
+    font-family: "Rubik", sans-serif;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width:  100vw;
+    height: 100vh;
+    padding: 1rem;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+
+
+
+/*
+ * THEMES
+ */
+
+body[data-theme="1"] {
+    color: hsl(262, 95%, 95%);
+    background: hsl(262, 52%, 34%);
+}
+
+body[data-theme="1"] h1 {
+    text-shadow: 0 0.07em hsl(15, 93%, 61%);
+}
+
+body[data-theme="1"] .reload {
+    background: linear-gradient(0deg, hsl(4, 93%, 61%), hsl(15, 93%, 61%));
+}
+
+
+body[data-theme="2"] {
+    color: hsl(201, 95%, 95%);
+    background: hsl(201, 45%, 54%);
+}
+
+body[data-theme="2"] h1 {
+    text-shadow: 0 0.07em hsl(48, 89%, 60%);
+}
+
+body[data-theme="2"] .reload {
+    color: hsla(201, 88%, 33%, 1);
+    background: linear-gradient(0deg, hsl(48, 89%, 60%), hsl(60, 89%, 60%));
+}
+
+
+
+body[data-theme="3"] {
+    color: hsl(2, 95%, 95%);
+    background: hsla(2, 100%, 54%, 1);;
+}
+
+body[data-theme="3"] h1 {
+    text-shadow: 0 0.07em hsl(282, 44%, 47%);
+}
+
+body[data-theme="3"] .reload {
+    background: linear-gradient(0deg, hsl(282, 44%, 47%), hsl(295, 44%, 47%));
+}
+
+
+
+
+
+
+h1 {
+    font-weight: 700;
+    font-size: 8vh;
+    color: inherit;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 1.2;
+    margin: 0;
+    margin-bottom: 7vh;
+    width: 100%;
+    word-wrap: break-word;
+}
+
+@media (min-width: 500px) {
+    h1 {
+        font-size: 10vh;
+    }
+}
+
+::-moz-selection { background: hsl(262, 100%, 100%); color: hsl(262, 52%, 34%); }
+::selection      { background: hsl(262, 100%, 100%); color: hsl(262, 52%, 34%); }
+
+#footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    padding: 1.25rem;
+    text-align: left;
+    color: inherit;
+    font-size: 13px;
+}
+
+#footer p {
+    margin: 0;
+    margin-top: 0.75em;
+    vertical-align: middle;
+}
+
+#footer p:first-child {
+    font-weight: 500;
+}
+
+.social {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 0.75rem;
+}
+
+.social img {
+    padding: 0.75rem;
+    width: 35px;
+    height: 35px;
+}
+
+.reload {
+    margin: 1.5rem 0;
+    padding: 1.1em 1.9em;
+    border-radius: 2px;
+    color: inherit;
+    display: inline-block;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 2.4vh;
+    letter-spacing: 0.5px;
+    transition: all 200ms;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+    /*line-height: 1.0;*/
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+.reload:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+}
+
+
+#particles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+}
+
+.no-select {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}

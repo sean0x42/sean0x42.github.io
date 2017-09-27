@@ -4,84 +4,13 @@
     <head>
         <title>Sean Bailey</title>
 
-        <link href="https://fonts.googleapis.com/css?family=Merriweather:700|Roboto:400,700" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Rubik:400,500,700" rel="stylesheet">
         <meta name="theme-color" content="#1C1C1C" />
         <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 
-        <style>
-            body {
-                margin: 0;
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                justify-content: center;
-                width:  100vw;
-                height: 100vh;
-                padding: 1rem;
-                box-sizing: border-box;
-            }
-
-            p {
-                font-family: 'Merriweather', serif;
-                font-weight: bold;
-                font-size: 10vh;
-                color: white;
-                text-align: center;
-                line-height: 1.4;
-                margin: 0;
-                margin-bottom: 7vh;
-            }
-
-            .copyright {
-                color: white;
-                font-family: 'Roboto', sans-serif;
-                position: absolute;
-                bottom: 0;
-                font-size: 13px;
-                padding: 1rem;
-                left:  0;
-                right: 0;
-                text-align: center;
-                line-height: 1.4;
-            }
-
-            .social {
-                position: absolute;
-                top: 0;
-                right: 0;
-                padding: 0.75rem;
-            }
-
-            .social img {
-                padding: 0.75rem;
-                width: 35px;
-                height: 35px;
-            }
-
-            .reload {
-                background: white;
-                padding: 1.2rem 2rem;
-                border-radius: 4px;
-                font-family: "Roboto";
-                font-size: 16px;
-                font-weight: bold;
-                letter-spacing: 0.1rem;
-                line-height: 1;
-                text-transform: uppercase;
-                cursor: pointer;
-            }
-
-            .no-select {
-                -webkit-touch-callout: none;
-                -webkit-user-select: none;
-                -khtml-user-select: none;
-                -moz-user-select: none;
-                -ms-user-select: none;
-                user-select: none;
-            }
-        </style>
+        <link rel="stylesheet" type="text/css" href="styles/app.css">
     </head>
-    <body>
+    <body data-theme="1">
 
         <div class="social">
             <a href="https://github.com/LuckehPickle/" target="_blank">
@@ -89,130 +18,16 @@
             </a>
         </div>
         
-        <p class="text"></p>
+        <h1 class="text"></h1>
 
         <div class="reload no-select">Roll again</div>
 
-        <span class="copyright">This site is under construction! Copyright 2017 - Sean Bailey All Rights Reserved.</span>
+        <div id="footer">
+            <p>This website is under construction. Something bigger is on its way!</p>
+            <p>Copyright 2017. Sean Bailey, All Rights Reserved.</p>
+        </div>
 
-        <script>
+        <script type="text/javascript" src="scripts/app.min.js"></script>
 
-            var adjectives = [
-                "rusty",
-                "brave",
-                "rainbow",
-                "putrid",
-                "clean",
-                "beautiful",
-                "adorable",
-                "elegant",
-                "sparkling",
-                "shy",
-                "angry",
-                "grumpy",
-                "chubby"
-            ];
-
-            var nouns = [
-                "banana",
-                "monkey",
-                "eagle",
-                "duck",
-                "boat",
-                "cloud",
-                "dog",
-                "cat",
-                "chicken",
-                "octopus",
-                "snake",
-                "bacon",
-                "berry",
-                "fork",
-                "spork",
-                "finger",
-                "guitar",
-                "bicycle",
-                "pillow",
-                "sausage",
-                "pasta",
-                "grandpa",
-                "grandma",
-                "spaghetti",
-                "squid",
-                "hacker"
-            ];
-
-            var colours = [
-                "#F39C12",
-                "#239B56",
-                "#2E86C1",
-                "#E74C3C",
-                "#2C3E50",
-                "#8E44AD",
-                "#2ECC71"
-            ];
-
-            var body, text, reload;
-
-
-            /**
-             * Roll
-             * Generates a random background colour
-             * and a random message.
-             */
-            var roll = function () {
-
-                // Set random background colour
-                var colour = randomItem(colours);
-                body.style.background = colour;
-                reload.style.color = colour;
-
-                // Set random content
-                text.innerHTML = randomItem(adjectives) + " " + randomItem(nouns);
-
-            }
-            
-            /**
-             * Ready
-             * A vanilla version of JQuery's .ready() function.
-             * @param func Function to execute on page load.
-             */
-            function ready (func) {
-                if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
-                    func();
-                } else {
-                    document.addEventListener("DOMContentLoaded", func);
-                }
-            }
-
-
-            /**
-             * Ready
-             * Executed when the server loads.
-             */
-            ready(function () {
-
-                // Get elements
-                body   = document.querySelector("body");
-                text   = document.querySelector(".text");
-                reload = document.querySelector(".reload");
-                
-                roll();
-
-                reload.addEventListener("click", roll);
-
-            });
-
-
-            /**
-             * Random item
-             * @param items Array of items.
-             * @return A random item from the array.
-             */
-            function randomItem (items) {
-                return items[Math.floor(Math.random() * items.length)];
-            }
-
-        </script>
     </body>
 </html>
