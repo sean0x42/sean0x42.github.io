@@ -63,10 +63,7 @@ ready(function () {
         "axolotl"
     ];
 
-    var themeCount = 3;
-    var currentTheme;
-
-    var body, text, reload;
+    var text, reload;
 
 
     /**
@@ -75,16 +72,6 @@ ready(function () {
     var roll = function () {
 
         text.innerHTML = randomItem(adjectives) + " " + randomItem(nouns);
-
-        /*var theme;
-
-        // Keep randomizing until a different theme is returned.
-        do {
-            theme = Math.round(Math.random() * (themeCount - 1)) + 1
-        } while (theme == currentTheme);
-
-        body.setAttribute("data-theme", theme);
-        currentTheme = theme;*/
 
     };
 
@@ -100,8 +87,7 @@ ready(function () {
     };
 
 
-    // Get elements
-    body   = document.querySelector("body");
+    // Get elements\
     text   = document.querySelector(".text");
     reload = document.querySelector(".reload");
 

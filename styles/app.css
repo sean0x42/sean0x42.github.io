@@ -9,71 +9,17 @@ body {
     height: 100vh;
     padding: 1rem;
     box-sizing: border-box;
-    overflow: hidden;
-}
-
--webkit-tap-highlight-color: rgba(0,0,0,0);
--webkit-tap-highlight-color: transparent;
-
-
-
-
-/*
- * THEMES
- */
-
-body[data-theme="1"] {
     color: hsl(262, 95%, 95%);
     background: hsl(262, 52%, 34%);
+    overflow: hidden;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    -webkit-tap-highlight-color: transparent;
 }
-
-body[data-theme="1"] h1 {
-    text-shadow: 0 0.07em hsl(15, 93%, 61%);
-}
-
-body[data-theme="1"] .reload {
-    background: linear-gradient(0deg, hsl(4, 93%, 61%), hsl(15, 93%, 61%));
-}
-
-
-body[data-theme="2"] {
-    color: hsl(201, 95%, 95%);
-    background: hsl(201, 45%, 54%);
-}
-
-body[data-theme="2"] h1 {
-    text-shadow: 0 0.07em hsl(48, 89%, 60%);
-}
-
-body[data-theme="2"] .reload {
-    color: hsla(201, 88%, 33%, 1);
-    background: linear-gradient(0deg, hsl(48, 89%, 60%), hsl(60, 89%, 60%));
-}
-
-
-
-body[data-theme="3"] {
-    color: hsl(2, 95%, 95%);
-    background: hsla(2, 100%, 54%, 1);;
-}
-
-body[data-theme="3"] h1 {
-    text-shadow: 0 0.07em hsl(282, 44%, 47%);
-}
-
-body[data-theme="3"] .reload {
-    background: linear-gradient(0deg, hsl(282, 44%, 47%), hsl(295, 44%, 47%));
-}
-
-
-
-
-
 
 h1 {
     font-weight: 700;
     font-size: 8vh;
-    color: inherit;
+    color: hsl(262, 98%, 98%);
     text-transform: uppercase;
     text-align: center;
     line-height: 1.2;
@@ -81,6 +27,7 @@ h1 {
     margin-bottom: 7vh;
     width: 100%;
     word-wrap: break-word;
+    text-shadow: 0 0.07em hsl(15, 93%, 61%);
 }
 
 @media (min-width: 500px) {
@@ -138,6 +85,7 @@ h1 {
     letter-spacing: 0.5px;
     transition: all 200ms;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+    background: linear-gradient(0deg, hsl(4, 93%, 61%), hsl(15, 93%, 61%));
     /*line-height: 1.0;*/
     vertical-align: middle;
     cursor: pointer;
