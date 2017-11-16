@@ -1,0 +1,194 @@
+$spacing-interval: 3rem;
+
+html {
+    box-sizing: border-box;
+}
+
+* {
+    &,
+    &:before,
+    &:after {
+        box-sizing: inherit;
+    }
+}
+
+body {
+    margin: 0;
+    padding: 0.25rem 0;
+    font-family: 'Rubik', sans-serif;
+    color: hsl(0, 0%, 25%);
+    line-height: 1.6;
+    position: relative;
+
+    &:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 5px;
+        background: linear-gradient(90deg, hsl(6, 78%, 57%), hsl(204, 70%, 53%), hsl(145, 63%, 49%), hsl(48, 89%, 60%));
+    }
+}
+
+section {
+    padding: 0.5rem 0;
+
+    &.dark {
+        color: hsl(0, 0%, 95%);
+        background: hsl(0, 0%, 22%);
+        h2 { color: hsl(0, 0%, 98%); }
+    }
+}
+
+.social-buttons {
+    display: flex;
+    justify-content: center;
+
+    .social {
+        display: flex;
+        align-items: center;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 1.6;
+        vertical-align: middle;
+        border-radius: 3px;
+        line-height: 1;
+        vertical-align: middle;
+        padding: 0.75rem 1.25rem 0.75rem 1rem;
+        margin: 0.5rem;
+        text-decoration: none;
+        cursor: pointer;
+        transition: all 200ms;
+        transform: translateY(0px);
+
+        &:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        svg {
+            width:  24px;
+            height: 24px;
+            margin-right: 0.75rem;
+            padding: 1px 0;
+        }
+
+        i {
+            margin-right: 0.75rem;
+            font-size: 20px;
+        }
+
+        &#github {
+            color: hsl(0, 0%, 100%);
+            background: #24292e;
+            path { fill: hsl(0, 0%, 98%); }
+        }
+
+        &#twitter {
+            color: hsl(203, 15%, 96%);
+            background: hsl(203, 89%, 53%);
+            svg { padding-top: 4px; }
+            path { fill: hsl(203, 15%, 96%); }
+        }
+
+        &#mail {
+            color: hsl(15, 15%, 98%);
+            background: hsl(15, 93%, 61%);
+        }
+
+    }
+}
+
+.wrapper {
+    width: 100%;
+    max-width: 900px;
+    margin: 7rem auto;
+    padding: 1rem;
+
+    h1 {
+        text-align: center;
+        font-size: 60px;
+        margin: 0 0 1rem;
+        text-transform: uppercase;
+    }
+
+    .image-header {
+        text-align: center;
+        margin: 0 0 ($spacing-interval + 1rem);
+
+        h2 {
+            font-size: 58px;
+            font-weight: 700;
+            text-transform: uppercase;
+            margin: 0 0 1.25rem;
+        }
+
+        p {
+            margin: 0 auto 2.5rem;
+            max-width: 500px;
+        }
+
+        a {
+            color: #f86d3f;
+        }
+
+        .tags {
+            margin: 0 0 2rem;
+            padding: 0;
+            list-style-type: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+
+            li {
+                font-size: 13px;
+                font-weight: 500;
+                letter-spacing: 1px;
+                line-height: 1.65;
+                padding: 3px 9px;
+                margin: 3px;
+                border-radius: 2px;
+                color: #fff6f5;
+                background: #f86d3f;
+                text-transform: lowercase;
+            }
+        }
+    }
+
+    .image-wrapper {
+        display: block;
+        margin: 0 0 $spacing-interval;
+        line-height: 1.0;
+        vertical-align: middle;
+        border-radius: 3px;
+        overflow: hidden;
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+
+        img { 
+            max-width: 100%; 
+            vertical-align: middle;
+        }
+    }
+
+    .mobile-image-wrapper {
+        display: flex;
+        justify-content: space-between;
+        margin: 0 0 $spacing-interval;
+
+        .image-wrapper {
+            margin: 0 $spacing-interval / 2;
+
+            &:first-child { margin-left:  0; }
+            &:last-child  { margin-right: 0; }
+        }
+    }
+
+    .video {
+        width: 100%;
+        border-radius: 3px;
+        overflow: hidden;
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    }
+}
