@@ -14,21 +14,12 @@ html {
 
 body {
     margin: 0;
-    padding: 0.25rem 0;
+    padding: 0;
     font-family: 'Rubik', sans-serif;
+    font-size: 15px;
     color: hsl(0, 0%, 25%);
     line-height: 1.6;
-    position: relative;
-
-    &:before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        height: 5px;
-        background: linear-gradient(90deg, hsl(6, 78%, 57%), hsl(204, 70%, 53%), hsl(145, 63%, 49%), hsl(48, 89%, 60%));
-    }
+    overflow-x: hidden;
 }
 
 section {
@@ -44,18 +35,19 @@ section {
 .social-buttons {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
 
     .social {
         display: flex;
         align-items: center;
         font-weight: 500;
-        font-size: 16px;
+        font-size: 15px;
         line-height: 1.6;
         vertical-align: middle;
         border-radius: 3px;
         line-height: 1;
         vertical-align: middle;
-        padding: 0.75rem 1.25rem 0.75rem 1rem;
+        padding: 0.6rem 1rem 0.6rem 0.75rem;
         margin: 0.5rem;
         text-decoration: none;
         cursor: pointer;
@@ -95,21 +87,35 @@ section {
         &#mail {
             color: hsl(15, 15%, 98%);
             background: hsl(15, 93%, 61%);
+            i { padding: 2px 0; }
         }
 
+    }
+}
+
+.hero {
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+    // background: red;
+    padding: 1rem 0;
+
+    .wrapper {
+        padding: 2rem 2rem 0;
     }
 }
 
 .wrapper {
     width: 100%;
     max-width: 900px;
-    margin: 7rem auto;
-    padding: 1rem;
+    margin: 0 auto;
+    padding: 4rem 2rem;
 
     h1 {
         text-align: center;
-        font-size: 60px;
+        font-size: 45px;
         margin: 0 0 1rem;
+        line-height: 1.4;
         text-transform: uppercase;
     }
 
@@ -118,8 +124,9 @@ section {
         margin: 0 0 ($spacing-interval + 1rem);
 
         h2 {
-            font-size: 58px;
+            font-size: 45px;
             font-weight: 700;
+            line-height: 1.4;
             text-transform: uppercase;
             margin: 0 0 1.25rem;
         }
@@ -154,6 +161,11 @@ section {
                 background: #f86d3f;
                 text-transform: lowercase;
             }
+
+            a {
+                color: #fff6f5;
+                text-decoration: none;
+            }
         }
     }
 
@@ -173,16 +185,7 @@ section {
     }
 
     .mobile-image-wrapper {
-        display: flex;
-        justify-content: space-between;
-        margin: 0 0 $spacing-interval;
-
-        .image-wrapper {
-            margin: 0 $spacing-interval / 2;
-
-            &:first-child { margin-left:  0; }
-            &:last-child  { margin-right: 0; }
-        }
+        display: none;
     }
 
     .video {
@@ -191,4 +194,50 @@ section {
         overflow: hidden;
         box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
     }
+
+    .scroll {
+        margin: 3rem 0;
+        display: flex;
+        justify-content: center;
+        i { font-size: 30px; }
+    }
+}
+
+@media (min-width: 400px) {
+    body {
+        font-size: 16px;
+    }
+}
+
+@media (min-width: 750px) {
+
+    .wrapper {
+        padding: 7rem 2rem;
+
+        h1 {
+            font-size: 60px;
+            line-height: 1.6;
+        }
+        .image-header h2 { 
+            font-size: 58px;
+            line-height: 1.6; 
+        }
+    }
+
+    .social-buttons .social {
+        padding: 0.75rem 1.25rem 0.75rem 1rem;
+    }
+
+    .mobile-image-wrapper {
+        display: flex;
+        justify-content: space-between;
+        margin: 0 0 $spacing-interval;
+
+        .image-wrapper {
+            margin: 0 $spacing-interval / 2;
+            &:first-child { margin-left:  0; }
+            &:last-child  { margin-right: 0; }
+        }
+    }
+
 }
