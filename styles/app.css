@@ -140,6 +140,7 @@ section {
     display: none; }
   .wrapper .video {
     width: 100%;
+    height: 250px;
     border-radius: 3px;
     overflow: hidden;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); }
@@ -162,6 +163,8 @@ section {
     .wrapper .image-header h2 {
       font-size: 58px;
       line-height: 1.6; }
+    .wrapper .video {
+      height: 500px; }
 
   .social-buttons .social {
     padding: 0.75rem 1.25rem 0.75rem 1rem; }
