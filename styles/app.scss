@@ -226,22 +226,22 @@ section {
         }
 
         .video { height: 500px; }
+
+        .mobile-image-wrapper {
+            display: flex;
+            justify-content: space-between;
+            margin: 0 0 $spacing-interval;
+
+            .image-wrapper {
+                margin: 0 $spacing-interval / 2;
+                &:first-child { margin-left:  0; }
+                &:last-child  { margin-right: 0; }
+            }
+        }
     }
 
     .social-buttons .social {
         padding: 0.75rem 1.25rem 0.75rem 1rem;
-    }
-
-    .mobile-image-wrapper {
-        display: flex;
-        justify-content: space-between;
-        margin: 0 0 $spacing-interval;
-
-        .image-wrapper {
-            margin: 0 $spacing-interval / 2;
-            &:first-child { margin-left:  0; }
-            &:last-child  { margin-right: 0; }
-        }
     }
 
 }

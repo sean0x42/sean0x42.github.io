@@ -165,19 +165,18 @@ section {
       line-height: 1.6; }
     .wrapper .video {
       height: 500px; }
+    .wrapper .mobile-image-wrapper {
+      display: flex;
+      justify-content: space-between;
+      margin: 0 0 3rem; }
+      .wrapper .mobile-image-wrapper .image-wrapper {
+        margin: 0 1.5rem; }
+        .wrapper .mobile-image-wrapper .image-wrapper:first-child {
+          margin-left: 0; }
+        .wrapper .mobile-image-wrapper .image-wrapper:last-child {
+          margin-right: 0; }
 
   .social-buttons .social {
-    padding: 0.75rem 1.25rem 0.75rem 1rem; }
-
-  .mobile-image-wrapper {
-    display: flex;
-    justify-content: space-between;
-    margin: 0 0 3rem; }
-    .mobile-image-wrapper .image-wrapper {
-      margin: 0 1.5rem; }
-      .mobile-image-wrapper .image-wrapper:first-child {
-        margin-left: 0; }
-      .mobile-image-wrapper .image-wrapper:last-child {
-        margin-right: 0; } }
+    padding: 0.75rem 1.25rem 0.75rem 1rem; } }
 
 /*# sourceMappingURL=app.css.map */
