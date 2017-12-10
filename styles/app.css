@@ -60,8 +60,6 @@ section {
     .social-buttons .social#twitter {
       color: #f3f5f6;
       background: #1ca0f2; }
-      .social-buttons .social#twitter svg {
-        padding-top: 4px; }
       .social-buttons .social#twitter path {
         fill: #f3f5f6; }
     .social-buttons .social#mail {
