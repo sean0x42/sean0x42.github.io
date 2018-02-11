@@ -90,7 +90,7 @@ a {
   border-radius: 3px;
 }
 
-.wrapper#portfolio {
+.wrapper#about, .wrapper#portfolio {
   margin-top: 4rem;
 }
 
@@ -217,7 +217,7 @@ a {
 .buttons .button.secondary {
   position: relative;
   color: #2ec29d;
-  background: none;
+  background: white;
   border-left: 3px solid #2ec2c2;
   border-right: 3px solid #2ec29d;
   border-radius: 3px;
@@ -314,4 +314,14 @@ a {
 
 .plyr {
   border-radius: 3px;
+}
+
+#particles {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  pointer-events: none;
+  z-index: -1;
 }

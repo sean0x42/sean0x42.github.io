@@ -95,8 +95,9 @@ a {
         border-radius: 3px;
     }
 
+    &#about,
     &#portfolio {
-        margin-top: 4rem; 
+        margin-top: 4rem;
     }
 
     &#comet {
@@ -194,7 +195,7 @@ a {
         &.secondary {
             position: relative;
             color: $blue-grad;
-            background: none;
+            background: white;
             border-left: 3px solid $blue;
             border-right: 3px solid $blue-grad;
             border-radius: 3px;
@@ -271,4 +272,14 @@ a {
 
 .plyr {
     border-radius: 3px;
+}
+
+#particles {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    pointer-events: none;
+    z-index: -1;
 }
