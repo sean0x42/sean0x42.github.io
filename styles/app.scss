@@ -1,18 +1,16 @@
-$orange:      hsl(15, 93%, 61%);
-$orange-grad: hsl(30, 93%, 61%);
-
-$gold:      hsl(40, 73%, 54%);
-$gold-grad: hsl(34, 73%, 54%);
-
-$blue:      hsl(180, 62%, 47%);
-$blue-grad: hsl(165, 62%, 47%);
-$blue-text: hsl(200, 10%, 97%);
+@import "colors";
 
 html {
     box-sizing: border-box;
+    -webkit-text-size-adjust: 100%;
 }
 
 * {
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-kerning: auto;
+
     &,
     &:before,
     &:after {
@@ -55,164 +53,19 @@ a {
     cursor: pointer;
 }
 
-.wrapper,
-.wide-wrapper {
-    width: 100%;
-    max-width: 680px;
-    margin: 0 auto;
-    padding: 4rem 2rem;
-}
-
-.wrapper-header {
-    max-width: 520px;
-    margin: 0 auto 4rem;
-    text-align: center;
-
-    h1 {
-        font-size: 50px;
-        margin: 0;
-    }
-
-    p {
-        margin: 1.25rem auto 2.25rem;
-    }
-}
-
-.wrapper {
-
-    .image-wrapper {
-        display: flex;
-        margin: 2rem 0;
-
-        & > * {
-            margin-right: 2rem;
-            &:last-child { margin-right: 0; }
-        }
-    }
-
-    img {
-        width: 100%;
-        border-radius: 3px;
-    }
-
-    &#about,
-    &#portfolio {
-        margin-top: 4rem;
-    }
-
-    &#comet {
-        max-width: 840px;
-        a { color: $orange; }
-
-        .tags li {
-            background-image: linear-gradient(90deg, $orange, $orange-grad);
-            a { color: $blue-text; }
-        }
-    }
-
-    &#luke-jamie {
-        max-width: 840px;
-
-        .tags li {
-            background-image: linear-gradient(90deg, $gold, $gold-grad);
-            a { color: $blue-text; }
-        }
-    }
-}
-
-.wide-wrapper {
-    max-width: 1000px;
-}
-
-.hero {
-    height: 100vh;
-    min-height: 600px;
-    display: flex;
-    align-items: center;
-    padding: 2rem;
-    text-align: center;
-
-    .wrapper {
-        padding: 2rem 2rem;
-    
-        h1 {
-            font-size: 55px;
-            margin: 0;
-            line-height: 1.0;
-            vertical-align: middle;
-        }
-
-        p {
-            max-width: 500px;
-            margin: 2.75rem auto 3rem;
-            font-size: 16px;
-            line-height: 1.8;
-        }
-    }
-}
+@import "components/check-circle";
+@import "components/button";
+@import "components/tag";
+@import "components/wrapper";
 
 .employment-status {
     position: absolute;
     top: 0;
     right: 0;
     padding: 2rem;
-    text-align: left;
+    text-align: right;
     margin: 0;
     line-height: 1.0;
-    font-size: 15px;
-}
-
-.buttons {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    margin: 2rem 0 0;
-
-    .button {
-        display: flex;
-        align-items: center;
-        text-decoration: none;
-        color: $blue-text;
-        background: linear-gradient(90deg, $blue, $blue-grad);
-        font-size: 15px;
-        font-weight: 500;
-        border-radius: 3px;
-        padding: 15px 22px;
-        text-decoration: none;
-        line-height: 1;
-        vertical-align: middle;
-        cursor: pointer;
-        margin-right: 1rem;
-        margin-bottom: 1rem;
-
-        &:last-child { margin-right: 0; }
-
-        i {
-            font-size: 22px;
-            margin-right: 0.6rem;
-        }
-
-        &.secondary {
-            position: relative;
-            color: $blue-grad;
-            background: white;
-            border-left: 3px solid $blue;
-            border-right: 3px solid $blue-grad;
-            border-radius: 3px;
-
-            &:before, &:after {
-                content: '';
-                position: absolute;
-                left: 0;
-                right: 0;
-                height: 3px;
-                background: linear-gradient(90deg, $blue, $blue-grad);
-            }
-
-            &:before { top:    0; }
-            &:after  { bottom: 0; }
-        }
-    }
 }
 
 .list-columns {
@@ -231,42 +84,6 @@ a {
         display: flex;
         align-items: center;
         margin-bottom: 0.75rem;
-    }
-
-    i {
-        color: $blue;
-        margin-right: 0.5rem;
-    }
-}
-
-.tags {
-    margin: 2rem 0;
-    padding: 0;
-    list-style-type: none;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-
-    li {
-        font-size: 13px;
-        font-weight: 500;
-        letter-spacing: 1px;
-        line-height: 1.65;
-        padding: 3px 9px;
-        margin: 3px;
-        border-radius: 2px;
-        color: $blue-text;
-        background: linear-gradient(90deg, $blue, $blue-grad);
-        background-size: cover;
-        background-position: center;
-        background-attachment: fixed;
-        text-transform: lowercase;
-    }
-
-    a {
-        color: $blue-text;
-        text-decoration: none;
     }
 }
 

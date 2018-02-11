@@ -1,0 +1,52 @@
+.buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 2rem 0 0;
+
+    .button {
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        color: $blue-text;
+        background: linear-gradient(90deg, $blue, $blue-grad);
+        font-size: 15px;
+        font-weight: 500;
+        border-radius: 3px;
+        padding: 15px 22px;
+        text-decoration: none;
+        line-height: 1;
+        vertical-align: middle;
+        cursor: pointer;
+        margin-right: 1rem;
+        margin-bottom: 1rem;
+
+        &:last-child { margin-right: 0; }
+
+        i {
+            font-size: 22px;
+            margin-right: 0.6rem;
+        }
+
+        &.secondary {
+            position: relative;
+            color: darken($blue, 10%);
+            background: white;
+            border-left: 3px solid $blue;
+            border-right: 3px solid $blue-grad;
+            border-radius: 3px;
+
+            &:before, &:after {
+                content: '';
+                position: absolute;
+                left: 0;
+                right: 0;
+                height: 3px;
+                background: linear-gradient(90deg, $blue, $blue-grad);
+            }
+
+            &:before { top:    0; }
+            &:after  { bottom: 0; }
+        }
+    }
+}

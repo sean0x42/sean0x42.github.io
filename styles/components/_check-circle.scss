@@ -1,0 +1,19 @@
+$dimensions: 28px;
+$color: $blue;
+
+.check-circle {
+    width: $dimensions;
+    height: $dimensions;
+    margin-right: 1rem;
+
+    circle {
+        fill: none;
+        stroke: $color;
+        stroke-width: 25;
+        stroke-miterlimit: 10;
+    }
+
+    path {
+        fill: $color;
+    }
+}

@@ -1,6 +1,15 @@
 html {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  -webkit-text-size-adjust: 100%;
+}
+
+* {
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-kerning: auto;
+          font-kerning: auto;
 }
 
 *, *:before, *:after {
@@ -45,6 +54,133 @@ li {
 a {
   color: #2ec2c2;
   cursor: pointer;
+}
+
+.check-circle {
+  width: 28px;
+  height: 28px;
+  margin-right: 1rem;
+}
+
+.check-circle circle {
+  fill: none;
+  stroke: #2ec2c2;
+  stroke-width: 25;
+  stroke-miterlimit: 10;
+}
+
+.check-circle path {
+  fill: #2ec2c2;
+}
+
+.buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: 2rem 0 0;
+}
+
+.buttons .button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-decoration: none;
+  color: #f7f8f8;
+  background: -webkit-gradient(linear, left top, right top, from(#2ec2c2), to(#2ec29d));
+  background: linear-gradient(90deg, #2ec2c2, #2ec29d);
+  font-size: 15px;
+  font-weight: 500;
+  border-radius: 3px;
+  padding: 15px 22px;
+  text-decoration: none;
+  line-height: 1;
+  vertical-align: middle;
+  cursor: pointer;
+  margin-right: 1rem;
+  margin-bottom: 1rem;
+}
+
+.buttons .button:last-child {
+  margin-right: 0;
+}
+
+.buttons .button i {
+  font-size: 22px;
+  margin-right: 0.6rem;
+}
+
+.buttons .button.secondary {
+  position: relative;
+  color: #249999;
+  background: white;
+  border-left: 3px solid #2ec2c2;
+  border-right: 3px solid #2ec29d;
+  border-radius: 3px;
+}
+
+.buttons .button.secondary:before, .buttons .button.secondary:after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: -webkit-gradient(linear, left top, right top, from(#2ec2c2), to(#2ec29d));
+  background: linear-gradient(90deg, #2ec2c2, #2ec29d);
+}
+
+.buttons .button.secondary:before {
+  top: 0;
+}
+
+.buttons .button.secondary:after {
+  bottom: 0;
+}
+
+.tags {
+  margin: 2rem 0;
+  padding: 0;
+  list-style-type: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.tags li {
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  line-height: 1.65;
+  padding: 3px 9px;
+  margin: 3px;
+  border-radius: 2px;
+  color: #f7f8f8;
+  background: -webkit-gradient(linear, left top, right top, from(#2ec2c2), to(#2ec29d));
+  background: linear-gradient(90deg, #2ec2c2, #2ec29d);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  text-transform: lowercase;
+}
+
+.tags a {
+  color: #f7f8f8;
+  text-decoration: none;
 }
 
 .wrapper,
@@ -108,7 +244,7 @@ a {
 }
 
 .wrapper#comet .tags li a {
-  color: #f7f8f8;
+  color: #f8f7f7;
 }
 
 .wrapper#luke-jamie {
@@ -121,7 +257,7 @@ a {
 }
 
 .wrapper#luke-jamie .tags li a {
-  color: #f7f8f8;
+  color: #f8f8f7;
 }
 
 .wide-wrapper {
@@ -164,81 +300,9 @@ a {
   top: 0;
   right: 0;
   padding: 2rem;
-  text-align: left;
+  text-align: right;
   margin: 0;
   line-height: 1.0;
-  font-size: 15px;
-}
-
-.buttons {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  margin: 2rem 0 0;
-}
-
-.buttons .button {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  text-decoration: none;
-  color: #f7f8f8;
-  background: -webkit-gradient(linear, left top, right top, from(#2ec2c2), to(#2ec29d));
-  background: linear-gradient(90deg, #2ec2c2, #2ec29d);
-  font-size: 15px;
-  font-weight: 500;
-  border-radius: 3px;
-  padding: 15px 22px;
-  text-decoration: none;
-  line-height: 1;
-  vertical-align: middle;
-  cursor: pointer;
-  margin-right: 1rem;
-  margin-bottom: 1rem;
-}
-
-.buttons .button:last-child {
-  margin-right: 0;
-}
-
-.buttons .button i {
-  font-size: 22px;
-  margin-right: 0.6rem;
-}
-
-.buttons .button.secondary {
-  position: relative;
-  color: #2ec29d;
-  background: white;
-  border-left: 3px solid #2ec2c2;
-  border-right: 3px solid #2ec29d;
-  border-radius: 3px;
-}
-
-.buttons .button.secondary:before, .buttons .button.secondary:after {
-  content: '';
-  position: absolute;
-  left: 0;
-  right: 0;
-  height: 3px;
-  background: -webkit-gradient(linear, left top, right top, from(#2ec2c2), to(#2ec29d));
-  background: linear-gradient(90deg, #2ec2c2, #2ec29d);
-}
-
-.buttons .button.secondary:before {
-  top: 0;
-}
-
-.buttons .button.secondary:after {
-  bottom: 0;
 }
 
 .list-columns {
@@ -266,50 +330,6 @@ a {
       -ms-flex-align: center;
           align-items: center;
   margin-bottom: 0.75rem;
-}
-
-.icon-list i {
-  color: #2ec2c2;
-  margin-right: 0.5rem;
-}
-
-.tags {
-  margin: 2rem 0;
-  padding: 0;
-  list-style-type: none;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-}
-
-.tags li {
-  font-size: 13px;
-  font-weight: 500;
-  letter-spacing: 1px;
-  line-height: 1.65;
-  padding: 3px 9px;
-  margin: 3px;
-  border-radius: 2px;
-  color: #f7f8f8;
-  background: -webkit-gradient(linear, left top, right top, from(#2ec2c2), to(#2ec29d));
-  background: linear-gradient(90deg, #2ec2c2, #2ec29d);
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-  text-transform: lowercase;
-}
-
-.tags a {
-  color: #f7f8f8;
-  text-decoration: none;
 }
 
 .plyr {
