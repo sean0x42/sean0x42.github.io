@@ -1,8 +1,11 @@
-$orange: hsl(15, 93%, 61%);
-$purple: hsl(282, 44%, 47%);
+$orange:      hsl(15, 93%, 61%);
+$orange-grad: hsl(30, 93%, 61%);
+
+$gold:      hsl(40, 73%, 54%);
+$gold-grad: hsl(34, 73%, 54%);
 
 $blue:      hsl(180, 62%, 47%);
-$blue-grad: hsl(160, 62%, 47%);
+$blue-grad: hsl(165, 62%, 47%);
 $blue-text: hsl(200, 10%, 97%);
 
 html {
@@ -29,22 +32,95 @@ body {
 strong {
     font-weight: normal;
     color: $blue-text;
-    background: $blue-grad;
+    background: linear-gradient(90deg, $blue, $blue-grad);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
     border-radius: 2px;
     padding: 1px 0;
-    // box-shadow: 2px 2px hsl(0, 0%, 88%);
     &:before, &:after { content: "\00a0"; }
+}
+
+h1 {
+    text-transform: uppercase;
+    text-align: center;
 }
 
 li {
     margin-bottom: 0.25rem;
 }
 
-.wrapper {
+a {
+    color: $blue;
+    cursor: pointer;
+}
+
+.wrapper,
+.wide-wrapper {
     width: 100%;
-    max-width: 675px;
+    max-width: 680px;
     margin: 0 auto;
     padding: 4rem 2rem;
+}
+
+.wrapper-header {
+    max-width: 520px;
+    margin: 0 auto 4rem;
+    text-align: center;
+
+    h1 {
+        font-size: 50px;
+        margin: 0;
+    }
+
+    p {
+        margin: 1.25rem auto 2.25rem;
+    }
+}
+
+.wrapper {
+
+    .image-wrapper {
+        display: flex;
+        margin: 2rem 0;
+
+        & > * {
+            margin-right: 2rem;
+            &:last-child { margin-right: 0; }
+        }
+    }
+
+    img {
+        width: 100%;
+        border-radius: 3px;
+    }
+
+    &#portfolio {
+        margin-top: 4rem; 
+    }
+
+    &#comet {
+        max-width: 840px;
+        a { color: $orange; }
+
+        .tags li {
+            background-image: linear-gradient(90deg, $orange, $orange-grad);
+            a { color: $blue-text; }
+        }
+    }
+
+    &#luke-jamie {
+        max-width: 840px;
+
+        .tags li {
+            background-image: linear-gradient(90deg, $gold, $gold-grad);
+            a { color: $blue-text; }
+        }
+    }
+}
+
+.wide-wrapper {
+    max-width: 1000px;
 }
 
 .hero {
@@ -60,7 +136,6 @@ li {
     
         h1 {
             font-size: 55px;
-            text-transform: uppercase;
             margin: 0;
             line-height: 1.0;
             vertical-align: middle;
@@ -101,7 +176,7 @@ li {
         font-size: 15px;
         font-weight: 500;
         border-radius: 3px;
-        padding: 14px 22px;
+        padding: 15px 22px;
         text-decoration: none;
         line-height: 1;
         vertical-align: middle;
@@ -161,4 +236,39 @@ li {
         color: $blue;
         margin-right: 0.5rem;
     }
+}
+
+.tags {
+    margin: 2rem 0;
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+    li {
+        font-size: 13px;
+        font-weight: 500;
+        letter-spacing: 1px;
+        line-height: 1.65;
+        padding: 3px 9px;
+        margin: 3px;
+        border-radius: 2px;
+        color: $blue-text;
+        background: linear-gradient(90deg, $blue, $blue-grad);
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        text-transform: lowercase;
+    }
+
+    a {
+        color: $blue-text;
+        text-decoration: none;
+    }
+}
+
+.plyr {
+    border-radius: 3px;
 }

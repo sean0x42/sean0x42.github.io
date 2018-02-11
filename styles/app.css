@@ -20,7 +20,11 @@ body {
 strong {
   font-weight: normal;
   color: #f7f8f8;
-  background: #2ec291;
+  background: -webkit-gradient(linear, left top, right top, from(#2ec2c2), to(#2ec29d));
+  background: linear-gradient(90deg, #2ec2c2, #2ec29d);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
   border-radius: 2px;
   padding: 1px 0;
 }
@@ -29,15 +33,99 @@ strong:before, strong:after {
   content: "\00a0";
 }
 
+h1 {
+  text-transform: uppercase;
+  text-align: center;
+}
+
 li {
   margin-bottom: 0.25rem;
 }
 
-.wrapper {
+a {
+  color: #2ec2c2;
+  cursor: pointer;
+}
+
+.wrapper,
+.wide-wrapper {
   width: 100%;
-  max-width: 675px;
+  max-width: 680px;
   margin: 0 auto;
   padding: 4rem 2rem;
+}
+
+.wrapper-header {
+  max-width: 520px;
+  margin: 0 auto 4rem;
+  text-align: center;
+}
+
+.wrapper-header h1 {
+  font-size: 50px;
+  margin: 0;
+}
+
+.wrapper-header p {
+  margin: 1.25rem auto 2.25rem;
+}
+
+.wrapper .image-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 2rem 0;
+}
+
+.wrapper .image-wrapper > * {
+  margin-right: 2rem;
+}
+
+.wrapper .image-wrapper > *:last-child {
+  margin-right: 0;
+}
+
+.wrapper img {
+  width: 100%;
+  border-radius: 3px;
+}
+
+.wrapper#portfolio {
+  margin-top: 4rem;
+}
+
+.wrapper#comet {
+  max-width: 840px;
+}
+
+.wrapper#comet a {
+  color: #f86d3f;
+}
+
+.wrapper#comet .tags li {
+  background-image: -webkit-gradient(linear, left top, right top, from(#f86d3f), to(#f89c3f));
+  background-image: linear-gradient(90deg, #f86d3f, #f89c3f);
+}
+
+.wrapper#comet .tags li a {
+  color: #f7f8f8;
+}
+
+.wrapper#luke-jamie {
+  max-width: 840px;
+}
+
+.wrapper#luke-jamie .tags li {
+  background-image: -webkit-gradient(linear, left top, right top, from(#dfa634), to(#df9534));
+  background-image: linear-gradient(90deg, #dfa634, #df9534);
+}
+
+.wrapper#luke-jamie .tags li a {
+  color: #f7f8f8;
+}
+
+.wide-wrapper {
+  max-width: 1000px;
 }
 
 .hero {
@@ -59,7 +147,6 @@ li {
 
 .hero .wrapper h1 {
   font-size: 55px;
-  text-transform: uppercase;
   margin: 0;
   line-height: 1.0;
   vertical-align: middle;
@@ -104,12 +191,12 @@ li {
           align-items: center;
   text-decoration: none;
   color: #f7f8f8;
-  background: -webkit-gradient(linear, left top, right top, from(#2ec2c2), to(#2ec291));
-  background: linear-gradient(90deg, #2ec2c2, #2ec291);
+  background: -webkit-gradient(linear, left top, right top, from(#2ec2c2), to(#2ec29d));
+  background: linear-gradient(90deg, #2ec2c2, #2ec29d);
   font-size: 15px;
   font-weight: 500;
   border-radius: 3px;
-  padding: 14px 22px;
+  padding: 15px 22px;
   text-decoration: none;
   line-height: 1;
   vertical-align: middle;
@@ -129,10 +216,10 @@ li {
 
 .buttons .button.secondary {
   position: relative;
-  color: #2ec291;
+  color: #2ec29d;
   background: none;
   border-left: 3px solid #2ec2c2;
-  border-right: 3px solid #2ec291;
+  border-right: 3px solid #2ec29d;
   border-radius: 3px;
 }
 
@@ -142,8 +229,8 @@ li {
   left: 0;
   right: 0;
   height: 3px;
-  background: -webkit-gradient(linear, left top, right top, from(#2ec2c2), to(#2ec291));
-  background: linear-gradient(90deg, #2ec2c2, #2ec291);
+  background: -webkit-gradient(linear, left top, right top, from(#2ec2c2), to(#2ec29d));
+  background: linear-gradient(90deg, #2ec2c2, #2ec29d);
 }
 
 .buttons .button.secondary:before {
@@ -184,4 +271,47 @@ li {
 .icon-list i {
   color: #2ec2c2;
   margin-right: 0.5rem;
+}
+
+.tags {
+  margin: 2rem 0;
+  padding: 0;
+  list-style-type: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.tags li {
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  line-height: 1.65;
+  padding: 3px 9px;
+  margin: 3px;
+  border-radius: 2px;
+  color: #f7f8f8;
+  background: -webkit-gradient(linear, left top, right top, from(#2ec2c2), to(#2ec29d));
+  background: linear-gradient(90deg, #2ec2c2, #2ec29d);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  text-transform: lowercase;
+}
+
+.tags a {
+  color: #f7f8f8;
+  text-decoration: none;
+}
+
+.plyr {
+  border-radius: 3px;
 }
