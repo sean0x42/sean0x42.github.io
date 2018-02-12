@@ -2,9 +2,9 @@ $dimensions: 28px;
 $color: $blue;
 
 .check-circle {
-    width: $dimensions;
-    height: $dimensions;
-    margin-right: 1rem;
+    width: $dimensions * 0.85;
+    height: $dimensions * 0.85;
+    margin-right: 0.75rem;
 
     circle {
         fill: none;
@@ -15,5 +15,13 @@ $color: $blue;
 
     path {
         fill: $color;
+    }
+}
+
+@media (min-width: 550px) {
+    .check-circle {
+        width: $dimensions;
+        height: $dimensions;
+        margin-right: 1rem;
     }
 }

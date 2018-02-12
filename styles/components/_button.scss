@@ -2,29 +2,28 @@
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    margin: 2rem 0 0;
+    margin: 1.5rem 0 0;
 
     .button {
         display: flex;
         align-items: center;
+        justify-content: center;
         text-decoration: none;
         color: $blue-text;
         background: linear-gradient(90deg, $blue, $blue-grad);
-        font-size: 15px;
+        font-size: 14px;
         font-weight: 500;
         border-radius: 3px;
-        padding: 15px 22px;
+        padding: 13px 18px;
         text-decoration: none;
         line-height: 1;
         vertical-align: middle;
         cursor: pointer;
-        margin-right: 1rem;
+        margin: 0 0.5rem 1rem;
         margin-bottom: 1rem;
 
-        &:last-child { margin-right: 0; }
-
         i {
-            font-size: 22px;
+            font-size: 20px;
             margin-right: 0.6rem;
         }
 
@@ -47,6 +46,21 @@
 
             &:before { top:    0; }
             &:after  { bottom: 0; }
+        }
+    }
+}
+
+@media (min-width: 550px) {
+    .buttons {
+        margin: 2rem 0 0;
+
+        .button {
+            font-size: 15px;
+            padding: 15px 22px;
+
+            i {
+                font-size: 22px;
+            }
         }
     }
 }

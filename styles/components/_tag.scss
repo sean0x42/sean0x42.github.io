@@ -1,5 +1,5 @@
 .tags {
-    margin: 2rem 0;
+    margin: 1.5rem 0;
     padding: 0;
     list-style-type: none;
     display: flex;
@@ -8,11 +8,11 @@
     flex-wrap: wrap;
 
     li {
-        font-size: 13px;
+        font-size: 12px;
         font-weight: 500;
         letter-spacing: 1px;
         line-height: 1.65;
-        padding: 3px 9px;
+        padding: 1px 6px;
         margin: 3px;
         border-radius: 2px;
         color: $blue-text;
@@ -26,5 +26,16 @@
     a {
         color: $blue-text;
         text-decoration: none;
+    }
+}
+
+@media (min-width: 550px) {
+    .tags {
+        margin: 2rem 0;
+
+        li {
+            font-size: 13px;
+            padding: 3px 9px;
+        }
     }
 }
