@@ -5,6 +5,11 @@ html {
     -webkit-text-size-adjust: 100%;
 }
 
+::selection {
+    color: $blue-text;
+    background: $blue;
+}
+
 * {
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
@@ -24,7 +29,7 @@ body {
     font-family: 'Rubik', sans-serif;
     font-size: 15px;
     color: hsl(0, 0%, 28%);
-    line-height: 1.7;
+    line-height: 1.75;
     overflow-x: hidden;
 }
 
