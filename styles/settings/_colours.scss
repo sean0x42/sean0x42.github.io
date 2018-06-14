@@ -1,0 +1,7 @@
+$primary: hsl(180, 62%, 47%);
+$primary-inverted: hsl(180, 15%, 97%);
+
+$text: hsl(hue($primary), 15%, 35%);
+$text-bold: hsl(hue($primary), 15%, 22%);
+
+$border: hsl(hue($primary), 20%, 84%);
