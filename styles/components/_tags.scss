@@ -1,0 +1,33 @@
+.tags {
+  margin: 2rem 0;
+  padding: 0;
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+
+  li {
+    font-size: $font-size * 0.8;
+    font-weight: 500;
+    letter-spacing: 1px;
+    line-height: 1.65;
+    padding: 3px 9px;
+    margin: 3px;
+    border-radius: 2px;
+    color: $primary-inverted;
+    background: $primary;
+    text-transform: lowercase;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+}
+
+@media (min-width: 550px) {
+  .tags {
+    margin: 3rem 0;
+  }
+}

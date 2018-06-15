@@ -1,0 +1,66 @@
+.portfolio {
+  margin: 4rem 0;
+
+  .wrapper {
+    margin: 15rem auto 5rem;
+  }
+
+  .images {
+    margin: 1rem auto;
+    width: 100%;
+    padding: 0 1rem;
+    max-width: 1000px;
+
+    img {
+      width: 100%;
+      border-radius: 3px;
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1), 0 5px 10px rgba(0, 0, 0, 0.1);
+      margin: 1rem 0;
+    }
+
+    .mobile-trio {
+      img {
+        display: block;
+        max-width: 300px;
+        margin: 2rem auto;
+      }
+    }
+
+    .plyr {
+      margin: 2rem 0 0;
+    }
+  }
+}
+
+@media (min-width: 700px) {
+  
+  .portfolio .images {
+    margin: 3rem auto;
+
+    .mobile-trio {
+      display: grid;
+      grid-gap: 1rem;
+      grid-template-columns: repeat(3, 1fr);
+
+      img {
+        margin: 0;
+        max-width: unset;
+      }
+    }
+
+    img {
+      margin: 2rem 0;
+    }
+  }
+
+}
+
+@media (min-width: 800px) {
+  
+  .portfolio .images {
+    .mobile-trio {
+      grid-gap: 2rem;
+    }
+  }
+
+}

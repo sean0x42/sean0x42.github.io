@@ -22,16 +22,14 @@
 .plyr *,
 .plyr *::after,
 .plyr *::before {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 .plyr a,
 .plyr button,
 .plyr input,
 .plyr label {
-  -ms-touch-action: manipulation;
-      touch-action: manipulation;
+  touch-action: manipulation;
 }
 
 .plyr:focus {
@@ -79,14 +77,11 @@
   background: #fff;
   border: 2px solid transparent;
   border-radius: 100%;
-  -webkit-transition: background .2s ease, border .2s ease, -webkit-transform .2s ease;
   transition: background .2s ease, border .2s ease, -webkit-transform .2s ease;
   transition: background .2s ease, border .2s ease, transform .2s ease;
   transition: background .2s ease, border .2s ease, transform .2s ease, -webkit-transform .2s ease;
-  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15), 0 0 0 1px rgba(0, 0, 0, 0.15);
-          box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15), 0 0 0 1px rgba(0, 0, 0, 0.15);
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15), 0 0 0 1px rgba(0, 0, 0, 0.15);
+  box-sizing: border-box;
 }
 
 .plyr input[type="range"]::-moz-range-track {
@@ -105,7 +100,6 @@
   background: #fff;
   border: 2px solid transparent;
   border-radius: 100%;
-  -webkit-transition: background .2s ease, border .2s ease, -webkit-transform .2s ease;
   transition: background .2s ease, border .2s ease, -webkit-transform .2s ease;
   transition: background .2s ease, border .2s ease, transform .2s ease;
   transition: background .2s ease, border .2s ease, transform .2s ease, -webkit-transform .2s ease;
@@ -146,7 +140,6 @@
   background: #fff;
   border: 2px solid transparent;
   border-radius: 100%;
-  -webkit-transition: background .2s ease, border .2s ease, -webkit-transform .2s ease;
   transition: background .2s ease, border .2s ease, -webkit-transform .2s ease;
   transition: background .2s ease, border .2s ease, transform .2s ease;
   transition: background .2s ease, border .2s ease, transform .2s ease, -webkit-transform .2s ease;
@@ -260,7 +253,6 @@
   padding: 20px;
   -webkit-transform: translateY(-60px);
           transform: translateY(-60px);
-  -webkit-transition: -webkit-transform 0.3s ease;
   transition: -webkit-transform 0.3s ease;
   transition: transform 0.3s ease;
   transition: transform 0.3s ease, -webkit-transform 0.3s ease;
@@ -309,12 +301,8 @@
 }
 
 .plyr__controls {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   line-height: 1;
   text-align: center;
   pointer-events: none;
@@ -347,8 +335,7 @@
 .plyr__controls button {
   position: relative;
   display: inline-block;
-  -ms-flex-negative: 0;
-      flex-shrink: 0;
+  flex-shrink: 0;
   overflow: visible;
   vertical-align: middle;
   padding: 7px;
@@ -356,7 +343,6 @@
   background: transparent;
   border-radius: 3px;
   cursor: pointer;
-  -webkit-transition: background 0.3s ease, color 0.3s ease, opacity 0.3s ease;
   transition: background 0.3s ease, color 0.3s ease, opacity 0.3s ease;
   color: inherit;
 }
@@ -397,12 +383,10 @@
   right: 0;
   bottom: 0;
   padding: 50px 10px 10px;
-  background: -webkit-gradient(linear, left top, left bottom, from(transparent), to(rgba(0, 0, 0, 0.5)));
-  background: linear-gradient(transparent, rgba(0, 0, 0, 0.5));
+  background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5));
   border-bottom-left-radius: inherit;
   border-bottom-right-radius: inherit;
   color: #fff;
-  -webkit-transition: opacity 0.3s ease;
   transition: opacity 0.3s ease;
 }
 
@@ -436,10 +420,8 @@
   background: #2ec2c2;
   border: 4px solid currentColor;
   border-radius: 100%;
-  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15);
-          box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15);
   color: #fff;
-  -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
 
@@ -517,7 +499,6 @@
           transform: translate(-50%, 10px) scale(0.8);
   -webkit-transform-origin: 50% 100%;
           transform-origin: 50% 100%;
-  -webkit-transition: opacity 0.2s 0.1s ease, -webkit-transform 0.2s 0.1s ease;
   transition: opacity 0.2s 0.1s ease, -webkit-transform 0.2s 0.1s ease;
   transition: transform 0.2s 0.1s ease, opacity 0.2s 0.1s ease;
   transition: transform 0.2s 0.1s ease, opacity 0.2s 0.1s ease, -webkit-transform 0.2s 0.1s ease;
@@ -590,9 +571,7 @@
 .plyr__progress {
   display: none;
   position: relative;
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
+  flex: 1;
 }
 
 .plyr__progress input[type="range"] {
@@ -671,7 +650,6 @@
   z-index: 1;
   color: #2ec2c2;
   background: transparent;
-  -webkit-transition: none;
   transition: none;
 }
 
@@ -681,7 +659,6 @@
   max-width: 99%;
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
-  -webkit-transition: none;
   transition: none;
 }
 
@@ -691,7 +668,6 @@
   max-width: 99%;
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
-  -webkit-transition: none;
   transition: none;
 }
 
@@ -701,17 +677,14 @@
 }
 
 .plyr__progress--buffer::-webkit-progress-value {
-  -webkit-transition: width 0.2s ease;
   transition: width 0.2s ease;
 }
 
 .plyr__progress--buffer::-moz-progress-bar {
-  -webkit-transition: width 0.2s ease;
   transition: width 0.2s ease;
 }
 
 .plyr__progress--buffer::-ms-fill {
-  -webkit-transition: width 0.2s ease;
   transition: width 0.2s ease;
 }
 
@@ -776,9 +749,7 @@
 }
 
 .plyr .plyr__volume {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
+  flex: 1;
   position: relative;
 }
 

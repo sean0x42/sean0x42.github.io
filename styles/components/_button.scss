@@ -1,66 +1,84 @@
 .buttons {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    margin: 1.5rem 0 0;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: -0.5rem;
+  margin-top: 1.5rem;
 
-    .button {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        text-decoration: none;
-        color: $blue-text;
-        background: linear-gradient(90deg, $blue, $blue-grad);
-        font-size: 14px;
-        font-weight: 500;
-        border-radius: 3px;
-        padding: 14px 19px;
-        text-decoration: none;
-        line-height: 1;
-        vertical-align: middle;
-        cursor: pointer;
-        margin: 0 0.5rem 1rem;
-        margin-bottom: 1rem;
-
-        i {
-            font-size: 20px;
-            margin-right: 0.75rem;
-        }
-
-        &.secondary {
-            position: relative;
-            color: darken($blue, 10%);
-            background: white;
-            border-left: 3px solid $blue;
-            border-right: 3px solid $blue-grad;
-            border-radius: 3px;
-
-            &:before, &:after {
-                content: '';
-                position: absolute;
-                left: 0;
-                right: 0;
-                height: 3px;
-                background: linear-gradient(90deg, $blue, $blue-grad);
-            }
-
-            &:before { top:    0; }
-            &:after  { bottom: 0; }
-        }
-    }
+  .button,
+  .button-secondary,
+  .button-tertiary {
+    margin: 0.5rem;
+  }
 }
 
-@media (min-width: 550px) {
-    .buttons {
-        margin: 2rem 0 0;
+.button,
+.button-secondary,
+.button-tertiary {
+  display: flex;
+  align-items: center;
+  font-size: $font-size * 0.88;
+  font-weight: 500;
+  line-height: 1.0;
+  vertical-align: middle;
+  border: none;
+  border-radius: 2px;
+  cursor: pointer;
+  text-decoration: none;
+  padding: $font-size ($font-size * 1.5);
+  @include no-highlight;
 
-        .button {
-            font-size: 15px;
-            padding: 15px 22px;
+  i.material-icons {
+    font-size: 22px;
+    font-weight: normal;
+    margin: -3px 0.75rem;
 
-            i {
-                font-size: 22px;
-            }
-        }
+    // This leaves the icon with a similar amount of padding as compared to bare text
+    &:first-child {
+      margin-left: -8px;
     }
+
+    &:last-child {
+      margin-right: -8px;
+    }
+  }
+
+  // For buttons that should fill the width of their container
+  &.wide {
+    justify-content: center;
+    width: 100%;
+  }
+
+  &:hover {
+    // Counter-act any :hover underlining.
+    text-decoration: none;
+  }
+}
+
+.button {
+  color: $primary-inverted;
+  background: linear-gradient(45deg, $primary, adjust-hue($primary, 6deg));
+  transition: transform 300ms;
+  transform: translateY(0px);
+
+  &:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+}
+
+.button-secondary {
+  position: relative;
+  color: darken($primary, 3%);
+  background: white;
+  border: 2px solid $border;
+  padding: ($font-size - 2px) ($font-size * 1.5 - 2px);
+
+  i.material-icons {
+    color: lighten($primary, 6%);
+  }
+}
+
+.button-tertiary {
+  color: $primary;
 }
