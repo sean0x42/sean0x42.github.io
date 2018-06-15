@@ -1,106 +1,37 @@
 .wrapper {
   width: 100%;
-  max-width: 55ch;
+  max-width: 58ch;
+  padding: 0 1rem;
   margin: 2rem auto;
+
+  &#comet ::selection,
+  &#comet .tags li {
+    background: $comet;
+    color: $comet-inverted;
+  }
+
+  &#comet a { 
+    color: $comet;
+  }
+
+  &#river-rats ::selection,
+  &#river-rats .tags li {
+    background: $river-rats;
+    color: $river-rats-inverted;
+  }
+
+  &#river-rats a {
+    color: $river-rats;
+  }
+
+  &#luke-jamie ::selection,
+  &#luke-jamie .tags li {
+    background: $luke-jamie;
+    color: $luke-jamie-inverted;
+  }
+
+  &#luke-jamie a {
+    color: $luke-jamie;
+  }
+
 }
-
-// .wrapper {
-//   width: 100%;
-//   max-width: 680px;
-//   margin: 0 auto;
-//   padding: 2rem;
-
-//   .image-wrapper {
-//     display: flex;
-//     margin: 1rem 0;
-
-//     & > * {
-//       margin: 0 0.5rem;
-//       &:first-child { margin-left:  0; }
-//       &:last-child  { margin-right: 0; }
-//     }
-//   }
-
-//   img {
-//     width: 100%;
-//     border-radius: 3px;
-//     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1), 0 5px 10px rgba(0, 0, 0, 0.1);
-//   }
-
-//   &#comet {
-//     max-width: 840px;
-//     a { color: $orange; }
-
-//     .tags li {
-//       background: linear-gradient(90deg, $orange, $orange-grad);
-//       a { color: $orange-text; }
-//     }
-//   }
-
-//   &#luke-jamie {
-//     max-width: 840px;
-
-//     .tags li {
-//       background: linear-gradient(90deg, $gold, $gold-grad);
-//       a { color: $gold-text; }
-//     }
-//   }
-
-//   &#river-rats {
-//     max-width: 840px;
-//     a { color: #824c9a; }
-
-//     .tags li {
-//       background: #824c9a;
-//       a { color: #fdfcfd; }
-//     }
-//   }
-// }
-
-// .wrapper-header {
-//   max-width: 520px;
-//   margin: 0 auto 4rem;
-//   text-align: center;
-
-//   h1 {
-//     font-size: 35px;
-//     margin: 2rem 0 0;
-//   }
-
-//   p {
-//     font-size: 16px;
-//     margin: 1rem auto 1.5rem;
-//   }
-// }
-
-// @media (min-width: 550px) {
-
-//   .wrapper {
-//     padding: 4rem 2rem;
-
-//     &#about,
-//     &#portfolio {
-//       margin-top: 4rem;
-//     }
-
-//     .image-wrapper {
-//       margin: 2rem 0;
-
-//       & > * {
-//         margin: 0 1rem;
-//       }
-//     }
-//   }
-
-//   .wrapper-header {
-//     h1 {
-//       font-size: 50px;
-//     }
-
-//     p {
-//       font-size: 16px;
-//       margin: 1.75rem auto 2.25rem;
-//     }
-//   }
-
-// }

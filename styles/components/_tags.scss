@@ -8,11 +8,11 @@
   flex-wrap: wrap;
 
   li {
-    font-size: 12px;
+    font-size: $font-size * 0.8;
     font-weight: 500;
     letter-spacing: 1px;
     line-height: 1.65;
-    padding: 1px 6px;
+    padding: 3px 9px;
     margin: 3px;
     border-radius: 2px;
     color: $primary-inverted;
@@ -21,7 +21,7 @@
   }
 
   a {
-    color: $primary-inverted;
+    color: inherit;
     text-decoration: none;
   }
 }
@@ -29,10 +29,5 @@
 @media (min-width: 550px) {
   .tags {
     margin: 3rem 0;
-
-    li {
-      font-size: 13px;
-      padding: 3px 9px;
-    }
   }
 }
