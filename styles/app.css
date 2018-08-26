@@ -28,7 +28,7 @@ body {
 
 body {
   margin: 0;
-  line-height: 1.9;
+  line-height: 1.75;
   overflow-x: hidden;
 }
 
@@ -126,6 +126,22 @@ a:hover {
 
 .wrapper#luke-jamie a {
   color: #dfa634;
+}
+
+.wrapper#ncmg ::-moz-selection,
+.wrapper#ncmg .tags li {
+  background: #2cc36b;
+  color: white;
+}
+
+.wrapper#ncmg ::selection,
+.wrapper#ncmg .tags li {
+  background: #2cc36b;
+  color: white;
+}
+
+.wrapper#ncmg a {
+  color: #2cc36b;
 }
 
 .hero {

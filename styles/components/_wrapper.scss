@@ -34,4 +34,14 @@
     color: $luke-jamie;
   }
 
+  &#ncmg ::selection,
+  &#ncmg .tags li {
+    background: $ncmg;
+    color: $ncmg-inverted;
+  }
+
+  &#ncmg a {
+    color: $ncmg;
+  }
+
 }
