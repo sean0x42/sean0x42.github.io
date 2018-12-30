@@ -1,0 +1,18 @@
+figure {
+  margin: 4rem -7rem;
+  text-align: center;
+
+  img {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 2px;
+    max-width: 100%;
+  }
+}
+
+figcaption {
+  color: rgba(0, 0, 0, 0.5);
+  font-size: 16px;
+  font-style: italic;
+  margin: 0 auto;
+  max-width: 50ch;
+}
