@@ -5,18 +5,18 @@
   list-style-type: none;
   margin: 1rem 0;
   padding: 0;
+}
 
-  li {
-    background: #ff7f11;
-    border-radius: 2px;
-    color: white;
-    font-size: 16px;
-    line-height: 1.4;
-    margin-right: 0.4rem;
+.tag {
+  background: #ff7f11;
+  border-radius: 2px;
+  color: $colour-white;
+  font-size: 16px;
+  line-height: 1.4;
+  margin-right: 0.4rem;
 
-    &::before,
-    &::after {
-      content: '\00a0';
-    }
+  &::before,
+  &::after {
+    content: $entity-non-breaking-space;
   }
 }

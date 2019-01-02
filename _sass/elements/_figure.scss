@@ -10,9 +10,10 @@ figure {
 }
 
 figcaption {
-  color: rgba(0, 0, 0, 0.5);
+  @extend %body-text;
+  color: $type-colour-light;
   font-size: 16px;
   font-style: italic;
-  margin: 0 auto;
+  margin: 0.5rem auto;
   max-width: 50ch;
 }

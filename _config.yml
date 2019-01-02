@@ -15,5 +15,5 @@ plugins:
   - jekyll-feed
 
 sass:
-  style: compact
+  style: expanded
   sass_dir: _sass
