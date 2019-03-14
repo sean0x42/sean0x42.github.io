@@ -1,12 +1,12 @@
-@import url('https://rsms.me/inter/inter-ui.css');
+@import url('https://rsms.me/inter/inter.css');
 
 // TODO: Swap these out for a theme grey
-$type-colour-dark: rgba(0, 0, 0, 0.85);
-$type-colour: rgba(0, 0, 0, 0.75);
-$type-colour-light: rgba(0, 0, 0, 0.5);
+$type-colour-dark: hsl(hue($primary), 10%, 24%);
+$type-colour: hsl(hue($primary), 10%, 28%);
+$type-colour-light: hsl(hue($primary), 10%, 30%);
 
-$type-line-height: 1.8;
-$type-font-size: 18px;
-$type-font-family: "Inter UI", -apple-system, BlinkMacSystemFont,
+$type-line-height: 1.6;
+$type-font-size: 16px;
+$type-font-family: "Inter", -apple-system, BlinkMacSystemFont,
                    "Segoe UI", Roboto, Helvetica, Arial, sans-serif,
                    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";

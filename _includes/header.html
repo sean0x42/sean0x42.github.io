@@ -1,0 +1,57 @@
+<div class="header">
+  <div class="wrapper">
+    <a
+      href="{% link index.html %}"
+      title="Home"
+      class="header__name"
+    >
+      Sean Bailey
+    </a>
+
+    <nav class="navigation">
+      <ul>
+        <li><a href="{% link articles.html %}">Articles</a></li>
+
+        <li>
+          <a href="{% link portfolio.html %}" title="Portfolio">
+            <span>Portfolio</span>
+          </a>
+        </li>
+
+        <li><a href="{% link about.md %}" title="About me">About me</a></li>
+      </ul>
+    </nav>
+
+    <ul class="social">
+      <li>
+        <a
+          href="https://github.com/sean0x42"
+          title="github.com/sean0x42"
+          class="social__icon"
+        >
+          {% include icons/github.html %}
+        </a>
+      </li>
+
+      <li>
+        <a
+          href="https://twitter.com/devseanbailey"
+          title="twitter.com/sean0x42"
+          class="social__icon"
+        >
+          {% include icons/twitter.html %}
+        </a>
+      </li>
+
+      <li>
+        <a
+          href="https://www.linkedin.com/in/sean0x42/"
+          title="linkedin.com/in/sean0x42"
+          class="social__icon"
+        >
+          {% include icons/linkedin.html %}
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>

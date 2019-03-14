@@ -1,0 +1,19 @@
+.header {
+  padding: 1.5rem 0;
+  width: 100%;
+
+  .wrapper {
+    align-items: center;
+    display: flex;
+  }
+
+  .header__name {
+    background: linear-gradient(180deg, $primary, $primary-dark);
+    color: $primary-inverted;
+    font-size: 1.75rem;
+    font-weight: bold;
+    padding: 0.25rem;
+    text-decoration: none;
+    transform: rotate(-1deg);
+  }
+}

@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-120954433-1"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -14,10 +13,16 @@
   <title>{{ content_title }} | seanbailey.io</title>
 
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=1, maximum-scale=1" />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1, user-scalable=1, maximum-scale=1"
+  />
   <meta name="description" content="{{ site.description }}" />
   <meta property="og:url" content="{{ site.url }}" />
-  <meta property="og:image" content="{{ site.url }}/static/images/open-graph.png" />
+  <meta
+    property="og:image"
+    content="{{ site.url }}/static/images/open-graph.png"
+  />
   <meta property="og:title" content="{{ content_title }} | seanbailey.io" />
   <meta property="og:description" content="{{ site.description }}" />
   <meta property="twitter:site" content="@{{ site.twitter_username }}" />
@@ -26,8 +31,9 @@
   <link rel="stylesheet" href="/static/stylesheets/modern-normalize.min.css" />
   <link rel="stylesheet" href="/static/stylesheets/application.css" />
 </head>
-
 <body>
+  {% include header.html %}
+
   {{ content}}
 </body>
 </html>
