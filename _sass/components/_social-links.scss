@@ -1,0 +1,20 @@
+.social {
+  align-items: center;
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+  margin-left: auto;
+  padding: 0;
+}
+
+.social__icon {
+  display: block;
+  line-height: 1;
+  padding: 0.75rem;
+
+  svg {
+    fill: $primary;
+    height: 26px;
+    vertical-align: middle;
+  }
+}

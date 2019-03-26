@@ -1,0 +1,8 @@
+%body-text {
+  color: $type-colour;
+  line-height: $type-line-height;
+}
+
+p {
+  @extend %body-text;
+}

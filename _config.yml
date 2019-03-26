@@ -2,11 +2,10 @@
 title: Sean Bailey
 email: sean@seanbailey.io
 description: >-
-  I'm a designer, developer, and intern at Komatsu.
+  Designer, developer, and computer science major!
 baseurl: ""
 url: "https://www.seanbailey.io"
-twitter_username: devseanbailey
-github_username: sean0x42
+date_format: "%B %d, %Y"
 
 # Build settings
 markdown: kramdown
@@ -15,5 +14,5 @@ plugins:
   - jekyll-feed
 
 sass:
-  style: compact
+  style: expanded
   sass_dir: _sass

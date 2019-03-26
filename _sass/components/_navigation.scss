@@ -1,0 +1,42 @@
+.navigation ul {
+  align-items: center;
+  display: flex;
+  list-style-type: none;
+  margin: 0 3rem;
+  padding: 0;
+
+  a {
+    color: $type-colour;
+    font-weight: 500;
+    padding: 0.75rem;
+    position: relative;
+    text-decoration: none;
+    z-index: 2;
+
+    &:hover {
+      color: $primary-light-inverted;
+    }
+
+    &:hover::before {
+      transform: scaleX(1);  
+    }
+
+    &::before {
+      background: $primary-light;
+      bottom: 9px;
+      content: "";
+      height: 1.5rem;
+      left: 0;
+      pointer-events: none;
+      position: absolute;
+      transform: scaleX(0);
+      transition: transform 200ms;
+      width: 100%;
+      z-index: -1;
+    }
+  }
+
+  svg {
+    fill: $type-colour-light;
+  }
+}
