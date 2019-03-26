@@ -5,8 +5,7 @@ description: >-
   Designer, developer, and computer science major!
 baseurl: ""
 url: "https://www.seanbailey.io"
-twitter_username: devseanbailey
-github_username: sean0x42
+date_format: "%B %d, %Y"
 
 # Build settings
 markdown: kramdown

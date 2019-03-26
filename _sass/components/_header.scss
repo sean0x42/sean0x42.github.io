@@ -1,19 +1,41 @@
 .header {
-  padding: 1.5rem 0;
+  padding: 4px 0 1rem;
+  position: relative;
   width: 100%;
+
+  &::before {
+    background: linear-gradient(90deg, $primary-dark, $primary-light);
+    content: "";
+    height: 4px;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
 
   .wrapper {
     align-items: center;
     display: flex;
   }
+}
 
-  .header__name {
-    background: linear-gradient(180deg, $primary, $primary-dark);
-    color: $primary-inverted;
-    font-size: 1.75rem;
-    font-weight: bold;
-    padding: 0.25rem;
-    text-decoration: none;
-    transform: rotate(-1deg);
+.header__name {
+  background: linear-gradient(180deg, $primary, $primary-dark);
+  color: $secondary-inverted;
+  font-size: 1.75rem;
+  font-weight: bold;
+  padding: 0 0.25rem;
+  position: relative;
+  text-decoration: none;
+
+  &::before {
+    background: linear-gradient(180deg, $secondary, $secondary-dark);
+    bottom: -4px;
+    content: "";
+    height: 100%;
+    left: 4px;
+    position: absolute;
+    width: 100%;
+    z-index: -1;
   }
 }

@@ -1,16 +1,4 @@
 body {
   font-family: $type-font-family;
   font-size: $type-font-size;
-  padding-top: 4px;
-  position: relative;
-
-  &::before {
-    background: linear-gradient(90deg, $primary-dark, $primary-light);
-    content: "";
-    height: 4px;
-    left: 0;
-    position: absolute;
-    right: 0;
-    top: 0;
-  }
 }
