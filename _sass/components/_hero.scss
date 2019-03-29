@@ -8,7 +8,7 @@
     bottom: 7em;
     content: "";
     left: 4em;
-    opacity: 0.2;
+    opacity: 0.4;
     pointer-events: none;
     position: absolute;
     right: 4em;
@@ -120,12 +120,10 @@
 }
 
 .hero__copyright {
-  bottom: 1em;
-  color: $grey-60;
-  left: 1em;
+  bottom: 2em;
+  color: $grey-70;
   position: absolute;
-  right: 1em;
-  text-align: center;
+  right: 6em;
 }
 
 @keyframes pulse {
