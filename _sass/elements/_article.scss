@@ -1,13 +1,38 @@
-article {
-  margin: 5rem auto;
-  max-width: calc(60ch + 14rem);
-  padding: 0 7rem;
+.article {
+  margin: 0 auto;
+  max-width: 85ch;
 
-  .post-meta {
-    margin: 0.5rem 0;
+  .article__category {
+    background: $primary; 
+    color: $primary-inverted;
+    display: inline-block;
+    line-height: 1.4;
+    margin: 4rem 0 1rem;
+
+    &::before,
+    &::after {
+      content: "\00a0";
+    }
   }
 
-  p {
-    margin: 2rem 0;
+  .article__title {
+    margin-top: 0;
   }
+
+  .article__subtitle {
+    color: $type-colour-light;
+    font-size: 21px;
+    line-height: 1.5;
+    margin: 1rem 0;
+  }
+}
+
+.article__meta {
+  color: $type-colour;
+  margin-bottom: 4rem;
+}
+
+.article__content {
+  font-size: 17px;
+  padding: 0 4rem;
 }
