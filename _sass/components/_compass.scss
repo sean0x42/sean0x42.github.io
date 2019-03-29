@@ -1,0 +1,47 @@
+.compass {
+  align-items: flex-start;
+  color: $grey-40;
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  right: 8em;
+  top: 2em;
+
+  .minor {
+    background: $grey-70;
+    height: 0.4em;
+    width: 2px;
+  }
+
+  .major {
+    padding-top: 1rem;
+    position: relative;
+    text-align: center;
+    width: 3.4em;
+
+    &::before {
+      background: $grey-60;
+      content: "";
+      display: block;
+      height: 0.75em;
+      left: calc(50% - 1px);
+      position: absolute;
+      top: 0;
+      transform: translateX(50%);
+      width: 2px;
+    }
+  }
+
+  &::before {
+    background: transparentize($grey-50, 0.75);
+    bottom: 0;
+    content: "";
+    left: 230px;
+    pointer-events: none;
+    position: absolute;
+    right: 230px;
+    top: 0;
+  }
+}

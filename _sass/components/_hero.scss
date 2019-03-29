@@ -1,21 +1,139 @@
 .hero {
-  background: $grey-90;
-  min-height: 100vh;
-  padding: 2vw;
-  text-align: center;
+  background: $black;
+  height: 100vh;
   width: 100vw;
 
-  h1 {
-    font-size: 20vh;
-    font-weight: 800;
-    margin: 0;
+  &::after {
+    background: url("../images/dot-grid.png");
+    bottom: 7em;
+    content: "";
+    left: 4em;
+    opacity: 0.2;
+    pointer-events: none;
+    position: absolute;
+    right: 4em;
+    top: 7em;
+    z-index: 0;
   }
 
   .wrapper {
-    height: 100%;
+    align-items: center;
+    bottom: 8rem;
+    display: flex;
+    justify-content: center;
+    left: 8rem;
     margin: 0;
     max-width: none;
-    padding: 2vh;
-    width: 100%;
+    position: absolute;
+    right: 8rem;
+    top: 14rem;
+    width: unset;
+    z-index: 2;
+  }
+
+  .social {
+    position: absolute;
+    right: 6em;
+    top: 8em;
+    z-index: 10;
+
+    .social__icon {
+      padding: 1em 1.25em;
+    }
+
+    svg {
+      fill: $grey-10;
+      height: 40px;
+    }
+
+    &::before {
+      background: transparentize($grey-50, 0.75);
+      bottom: 0.25em;
+      content: "";
+      height: 2em;
+      left: 0;
+      pointer-events: none;
+      position: absolute;
+      right: 2em;
+      z-index: -1;
+    }
+  }
+}
+
+.hero__header {
+  align-items: flex-start;
+  display: flex;
+  left: 6em;
+  position: absolute;
+  top: 2em;
+  z-index: 1;
+
+  h1 {
+    color: $white;
+    font-size: 52px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    line-height: 1;
+    margin: 0;
+    text-transform: uppercase;
+  }
+
+  p {
+    color: $grey-20;
+    font-size: 19px;
+    font-weight: 500;
+    margin: 0.5rem 0;
+
+    &::after {
+      animation-direction: alternate;
+      animation-duration: 600ms;
+      animation-iteration-count: infinite;
+      animation-name: pulse;
+      animation-timing-function: cubic-bezier(1, 0, 0, 1);
+      content: "_";
+    }
+  }
+
+  .inner {
+    padding-top: 2px;
+  }
+
+  &::before {
+    background: transparentize($grey-50, 0.75);
+    bottom: 1em;
+    content: "";
+    height: 3em;
+    left: 1.5em;
+    pointer-events: none;
+    position: absolute;
+    right: -1.5em;
+    z-index: -1;
+  }
+}
+
+.hero__triangle {
+  $size: 87px;
+  height: $size;
+  margin-right: 2em;
+  stroke: $grey-10;
+  width: $size;
+}
+
+.hero__copyright {
+  bottom: 1em;
+  color: $grey-60;
+  left: 1em;
+  position: absolute;
+  right: 1em;
+  text-align: center;
+}
+
+@keyframes pulse {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
   }
 }

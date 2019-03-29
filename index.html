@@ -4,10 +4,32 @@ title: Sean Bailey
 ---
 
 <div class="hero">
-  <div class="wrapper">
-    <svg height="110px" width="110px" viewBox="-20 -10 240 180" xmlns="http://www.w3.org/2000/svg">
-      <polygon points="0,0, 100,173.205 200,0" fill="none" stroke="black" stroke-width="18px" />
+  <div class="hero__header">
+    <svg class="hero__triangle" height="80px" width="80px" viewBox="-20 -10 240 180" xmlns="http://www.w3.org/2000/svg">
+      <polygon points="0,0, 100,173.205 200,0" fill="none" stroke-width="20px" />
     </svg>
-    <h1>Sean Bailey</h1>
+
+    <div class="inner">
+      <h1>Sean Bailey</h1>
+      <p>Digital Designer &amp; Software Developer</p>
+    </div>
   </div>
+
+  <ul class="compass">
+    <li class="minor"></li>
+    {% for i in (24..35) %}
+      <li class="major">{{ i }}0</li>
+      <li class="minor"></li>
+    {% endfor %}
+  </ul>
+
+  {% include social.html %}
+
+  <div class="wrapper">
+    <a class="hero__link" href="{% link articles.html %}">Articles</a>
+    <a class="hero__link" href="{% link portfolio.html %}">Portfolio</a>
+    <a class="hero__link" href="{% link about.md %}">About Me</a>
+  </div>
+
+  <div class="hero__copyright">Copyright &copy; 2019 &mdash; Sean Bailey</div>
 </div>
