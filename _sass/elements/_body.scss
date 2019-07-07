@@ -1,0 +1,27 @@
+body {
+  background: $black;
+  font-family: $type-font-family;
+  min-height: 100vh;
+  overflow-x: hidden;
+  padding: 1.2rem;
+  width: 100vw;
+
+  &::after {
+    background: url("../images/dot-grid.png");
+    bottom: 7rem;
+    content: "";
+    left: 5rem;
+    opacity: 0.4;
+    pointer-events: none;
+    position: fixed;
+    right: 5rem;
+    top: 7rem;
+    z-index: -1;
+  }
+}
+
+@media (min-width: 600px) {
+  body {
+    padding: 2rem;
+  }
+}

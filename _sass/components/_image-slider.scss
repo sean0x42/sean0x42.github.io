@@ -1,0 +1,18 @@
+.image-slider {
+  align-items: stretch;
+  display: flex;
+  height: 500px;
+  margin: 3rem 0;
+  overflow-x: scroll;
+  padding-bottom: 1rem;
+  width: 100%;
+
+  img {
+    border-radius: 3px;
+    height: 100%;
+
+    &:not(:last-child) {
+      margin-right: 2rem;
+    }
+  }
+}

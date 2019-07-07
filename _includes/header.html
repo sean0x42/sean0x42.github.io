@@ -1,0 +1,30 @@
+<header class="header">
+  <div class="name">
+    <svg
+      class="name__triangle"
+      viewBox="-20 -10 240 180"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <polygon
+        points="0,0, 100,173.205 200,0"
+        fill="none"
+        stroke-width="20px"
+      />
+    </svg>
+
+    <div class="name__inner">
+      <h1>Sean Bailey</h1>
+      <p>Digital Designer &amp; Software Developer</p>
+    </div>
+  </div>
+
+  <ul class="compass">
+    <li class="compass__minor"></li>
+    {% for i in (24..35) %}
+      <li class="compass__major">{{ i }}0</li>
+      <li class="compass__minor"></li>
+    {% endfor %}
+  </ul>
+
+  {% include social.html %}
+</header>

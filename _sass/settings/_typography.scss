@@ -1,0 +1,11 @@
+@import url('https://rsms.me/inter/inter.css');
+
+$type-colour-strong: $white;
+$type-colour: $grey-10;
+$type-colour-light: hsl(hue($primary), 10%, 30%);
+
+$type-line-height: 1.6;
+$type-font-size: 19px;
+$type-font-family: "Inter", -apple-system, BlinkMacSystemFont,
+                   "Segoe UI", Roboto, Helvetica, Arial, sans-serif,
+                   "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
