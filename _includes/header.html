@@ -1,27 +1,30 @@
-<div class="header">
-  <div class="wrapper">
-    <a
-      href="{% link index.html %}"
-      title="Home"
-      class="header__name"
+<header class="header">
+  <div class="name">
+    <svg
+      class="name__triangle"
+      viewBox="-20 -10 240 180"
+      xmlns="http://www.w3.org/2000/svg"
     >
-      Sean Bailey
-    </a>
+      <polygon
+        points="0,0, 100,173.205 200,0"
+        fill="none"
+        stroke-width="20px"
+      />
+    </svg>
 
-    <nav class="navigation">
-      <ul>
-        <li><a href="{% link articles.html %}">Articles</a></li>
-
-        <li>
-          <a href="{% link portfolio.html %}" title="Portfolio">
-            <span>Portfolio</span>
-          </a>
-        </li>
-
-        <li><a href="{% link about.md %}" title="About me">About me</a></li>
-      </ul>
-    </nav>
-
-    {% include social.html %}
+    <div class="name__inner">
+      <h1>Sean Bailey</h1>
+      <p>Digital Designer &amp; Software Developer</p>
+    </div>
   </div>
-</div>
+
+  <ul class="compass">
+    <li class="compass__minor"></li>
+    {% for i in (24..35) %}
+      <li class="compass__major">{{ i }}0</li>
+      <li class="compass__minor"></li>
+    {% endfor %}
+  </ul>
+
+  {% include social.html %}
+</header>

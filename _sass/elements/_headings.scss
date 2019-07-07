@@ -1,12 +1,19 @@
 %heading {
-  color: $type-colour-dark;
+  color: $type-colour-strong;
 }
 
 h1 {
   @extend %heading;
-  font-size: 3rem;
+  font-size: 2.5rem;
   line-height: 1.2;
-  margin: 4rem 0 0;
+  margin: 5rem 0 0;
+
+  &.has-eyebrow {
+    border-left: 4px solid $type-colour;
+    margin: 0;
+    padding-left: 1rem;
+    padding-top: 0.8rem;
+  }
 }
 
 h2 {
@@ -20,4 +27,10 @@ h2 {
 
 h3 {
   @extend %heading;
+}
+
+@media (min-width: 600px) {
+  h1 {
+    font-size: 3rem;
+  }
 }

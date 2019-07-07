@@ -1,4 +1,8 @@
 blockquote {
-  color: rgba(0, 0, 0, 0.6);
+  border-left: 3px solid $white;
+  color: $type-colour;
+  font-size: $type-font-size;
   font-style: italic;
+  margin-left: 0;
+  padding-left: 1rem;
 }

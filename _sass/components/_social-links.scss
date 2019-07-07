@@ -1,20 +1,106 @@
 .social {
-  align-items: center;
-  display: flex;
+  background: $black;
+  bottom: 0;
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: 1fr 1fr 1fr;
+  left: 0;
   list-style-type: none;
   margin: 0;
-  margin-left: auto;
-  padding: 0;
+  padding: 0 1rem;
+  position: fixed;
+  right: 0;
+  z-index: 10;
 }
 
 .social__icon {
-  display: block;
+  align-items: center;
+  display: flex;
+  fill: $grey-10;
+  flex-direction: column;
+  justify-content: center;
   line-height: 1;
-  padding: 0.75rem;
+  padding: 1rem;
+  text-decoration: none;
+  transform: translateY(0);
+  transition: all 100ms;
 
   svg {
-    fill: $primary;
-    height: 26px;
+    height: 30px;
     vertical-align: middle;
+  }
+
+  span {
+    color: $type-colour;
+    font-size: 16px;
+    font-weight: 500;
+    margin-top: 0.5rem;
+  }
+
+  &:hover {
+    fill: $white;
+    transform: translateY(-2px);
+  }
+}
+
+@media (min-width: 850px) {
+  .social {
+    align-items: flex-start;
+    background: transparent;
+    bottom: unset;
+    display: flex;
+    grid-gap: unset;
+    grid-template-columns: unset;
+    left: unset;
+    padding: 0;
+    position: relative;
+    right: unset;
+    z-index: unset;
+
+    &__icon {
+      flex-direction: row;
+      padding: 0.5rem 1rem;
+
+      svg {
+        height: 40px;
+      }
+
+      span {
+        display: none;
+      }
+    }
+
+    &::before {
+      background: transparentize($grey-50, 0.75);
+      content: "";
+      height: 2rem;
+      left: 0;
+      pointer-events: none;
+      position: absolute;
+      right: 3rem;
+      top: 2rem;
+      z-index: -1;
+    }
+  }
+}
+
+@media (min-width: 1070px) {
+  .social {
+    align-items: center;
+    margin-left: auto;
+    position: absolute;
+    right: 3rem;
+    top: 4rem;
+    z-index: 10;
+
+    &__icon {
+      padding: 1rem 1.25rem;
+    }
+
+    &::before {
+      bottom: 0.25rem;
+      right: 2rem;
+      top: unset;
+    }
   }
 }
