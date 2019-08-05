@@ -1,7 +1,5 @@
 # seanbailey.io 🐧
 
-[![GitLicense](https://gitlicense.com/badge/sean0x42/sean0x42.github.io)](https://gitlicense.com/license/sean0x42/sean0x42.github.io)
-
 Welcome to my home on the web! Now featuring:
 
  * Portfolio
