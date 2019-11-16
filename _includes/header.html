@@ -4,6 +4,7 @@
       class="name__triangle"
       viewBox="-20 -10 240 180"
       xmlns="http://www.w3.org/2000/svg"
+      aria-hidden="true"
     >
       <polygon
         points="0,0, 100,173.205 200,0"
@@ -18,7 +19,7 @@
     </div>
   </div>
 
-  <ul class="compass">
+  <ul class="compass" aria-hidden="true">
     <li class="compass__minor"></li>
     {% for i in (24..35) %}
       <li class="compass__major">{{ i }}0</li>
