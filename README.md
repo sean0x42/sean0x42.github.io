@@ -1,10 +1,8 @@
-# seanbailey.io 🐧
+# seanbailey.dev 🐧
 
 Welcome to my home on the web! Now featuring:
 
  * Portfolio
- * Design and development blog
- * About
 
 
 ## Contributions
