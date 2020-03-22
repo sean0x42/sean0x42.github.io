@@ -1,11 +1,12 @@
 ---
+title: Managing the Rust Learning Curve
+date: 2020-03-22
+author: Sean Bailey
 tags:
-  - Rust
-  - Software Development
-publishedOn: 2020-03-22
+  - rust
+  - software-development
+  - education
 ---
-
-# Why Rust is Worth Learning
 
 - Speaking as someone that recently overcame the learning curve of Rust, it's
   not as big as it looks, but no one can deny its existence.

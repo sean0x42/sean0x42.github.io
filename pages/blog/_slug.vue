@@ -1,6 +1,7 @@
-/* eslint-disable vue/no-v-html */
 <template>
-  <div v-html="content"></div>
+  <div :key="$route.params.slug">
+    <div v-html="content"></div>
+  </div>
 </template>
 
 <script lang="ts">
@@ -19,7 +20,8 @@ export default Vue.extend({
    */
   async asyncData({ params }) {
     const content = await import(`~/articles/${params.slug}.md`)
-    return { content: content.default }
-  }
+    console.log(content)
+    return { content: content.html }
+  },
 })
 </script>

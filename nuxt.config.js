@@ -11,10 +11,10 @@ export default {
       {
         hid: 'description',
         name: 'description',
-        content: process.env.npm_package_description || ''
-      }
+        content: process.env.npm_package_description || '',
+      },
     ],
-    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
+    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
   },
   /*
    ** Customize the progress-bar color
@@ -34,12 +34,12 @@ export default {
   buildModules: [
     '@nuxt/typescript-build',
     // Doc: https://github.com/nuxt-community/stylelint-module
-    '@nuxtjs/stylelint-module'
+    '@nuxtjs/stylelint-module',
   ],
   /*
    ** Nuxt.js modules
    */
-  modules: ['@nuxtjs/markdownit'],
+  modules: [],
   /*
    ** Build configuration
    */
@@ -47,13 +47,11 @@ export default {
     /*
      ** You can extend webpack config here
      */
-    extend(_config, _ctx) {}
+    extend(config, _ctx) {
+      config.module.rules.push({
+        test: /\.md$/,
+        loader: 'frontmatter-markdown-loader',
+      })
+    },
   },
-  // See https://github.com/markdown-it/markdown-it
-  markdownit: {
-    html: true,
-    breaks: true,
-    linkify: true,
-    use: ['markdown-it-footnote', 'markdown-it-anchor']
-  }
 }
