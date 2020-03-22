@@ -1,8 +1,0 @@
-@mixin not-selectable() {
-  user-select: none;
-  -webkit-tap-highlight-color: $colour-transparent;
-}
-
-.is-not-selectable {
-  @include not-selectable();
-}

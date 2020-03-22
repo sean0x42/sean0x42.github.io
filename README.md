@@ -1,11 +1,22 @@
-# seanbailey.dev 🐧
+# seanbailey.dev
 
-Welcome to my home on the web! Now featuring:
+> Home of Sean Bailey. Designer, software engineer, and lover of side projects.
 
- * Portfolio
+## Build Setup
 
+```bash
+# install dependencies
+$ yarn install
 
-## Contributions
+# serve with hot reload at localhost:3000
+$ yarn dev
 
-Contributions are welcome, but only if you really want to. Your time may be
-better spent elsewhere.
+# build for production and launch server
+$ yarn build
+$ yarn start
+
+# generate static project
+$ yarn generate
+```
+
+For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
