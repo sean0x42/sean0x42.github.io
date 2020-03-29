@@ -1,3 +1,5 @@
+import glob from 'glob'
+
 export default {
   mode: 'spa',
   /*
@@ -14,7 +16,9 @@ export default {
         content: process.env.npm_package_description || '',
       },
     ],
-    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
+    link: [
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+    ],
   },
   /*
    ** Customize the progress-bar color
@@ -51,6 +55,14 @@ export default {
       config.module.rules.push({
         test: /\.md$/,
         loader: 'frontmatter-markdown-loader',
+      })
+    },
+  },
+  generate: {
+    routes: function() {
+      return glob.sync('**/*.md', { cwd: 'articles' }).map((path) => {
+        const slug = path.substr(0, path.lastIndexOf('.'))
+        return `/blog/${slug}`
       })
     },
   },

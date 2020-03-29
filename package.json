@@ -13,6 +13,8 @@
   },
   "dependencies": {
     "@nuxt/typescript-runtime": "^0.4.0",
+    "dayjs": "^1.8.23",
+    "modern-normalize": "^0.6.0",
     "nuxt": "^2.0.0"
   },
   "devDependencies": {
@@ -26,7 +28,9 @@
     "eslint-plugin-nuxt": ">=0.4.2",
     "eslint-plugin-prettier": "^3.1.2",
     "frontmatter-markdown-loader": "^3.3.0",
+    "node-sass": "^4.13.1",
     "prettier": "^1.19.1",
+    "sass-loader": "^8.0.2",
     "stylelint": "^10.1.0"
   }
 }

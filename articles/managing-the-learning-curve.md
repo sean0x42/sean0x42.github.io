@@ -22,3 +22,16 @@ tags:
   - Some fantastic design decisions.
     - Powerful enums and pattern matching
     - No sneaky null reference exceptions.
+- Be prepared to change some habits
+  - You may be doing some silly things in your previous languages that just
+    won't fly with Rust.
+  - You may need to work a little harder, taking care of edge cases that you
+    previously overlooked.
+- Rust docs can be a little confusing to navigate and understand at first. It's
+  vital that you try to understand how modules and crates are organised and
+  exported/imported. Understanding this will help you figure out how to use
+  docs—vital to the success of any Rustacean.
+- Remember to return to the [Rust Programming Language][1]. This book was
+  written by the members of the Rust core team.
+
+[1]: https://doc.rust-lang.org/stable/book/
