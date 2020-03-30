@@ -1,23 +1,28 @@
 <template>
-  <article :key="$route.params.slug" class="article">
-    <header>
-      <h1>{{ title }}</h1>
-      <p class="subtitle">
-        Published by {{ author }} on {{ publishedAt }}.
-      </p>
+  <Wrapper>
+    <article :key="$route.params.slug" class="article">
+      <header>
+        <ul class="tags">
+          <li v-for="tag in tags" v-bind:key="tag">{{ tag }}</li>
+        </ul>
 
-      <ul class="tags">
-        <li v-for="tag in tags">{{ tag }}</li>
-      </ul>
-    </header>
+        <h1>{{ title }}</h1>
+        <p class="subtitle">
+          Published by <strong>{{ author }}</strong> on
+          <strong>{{ publishedAt }}</strong
+          >.
+        </p>
+      </header>
 
-    <div v-html="body"></div>
-  </article>
+      <main v-html="body"></main>
+    </article>
+  </Wrapper>
 </template>
 
 <script lang="ts">
 import Vue from 'vue'
 import dayjs from 'dayjs'
+import Wrapper from '~/components/Wrapper.vue'
 
 export default Vue.extend({
   /**
@@ -31,33 +36,90 @@ export default Vue.extend({
    * Fetch document content.
    */
   async asyncData({ params }) {
-    const { html, attributes } = await import(`~/articles/${params.slug}.md`)
+    const article = await import(`~/articles/${params.slug}.md`)
     return {
-      body: html,
-      publishedAt: dayjs(attributes.data).format('MMMM D, YYYY'),
-      ...attributes,
+      body: article.html,
+      ...article.attributes,
     }
   },
+
+  head() {
+    return {
+      title: `${this.title} by ${this.author}`,
+    }
+  },
+
+  computed: {
+    publishedAt: function () {
+      return dayjs(this.date).format('MMMM D, YYYY')
+    },
+  },
+
+  components: { Wrapper },
 })
 </script>
 
+<style lang="scss">
+article main {
+  h1 {
+    margin-top: 5rem;
+  }
+
+  p {
+    margin: 2rem 0;
+  }
+}
+</style>
+
 <style lang="scss" scoped>
 article {
-  color: #333;
-  max-width: 70ch;
+  color: #555;
+}
+
+header {
+  margin-top: 6rem;
+  margin-bottom: 2rem;
+  font-size: 20px;
+
+  h1 {
+    font-family: 'Playfair Display', sans-serif;
+    font-size: 3.052em;
+  }
+}
+
+main {
+  font-size: 20px;
+  max-width: 875px; // 875px = 70ch with optimal font settings
   width: 100%;
-  margin: 4rem auto;
-  font-size: 18px;
+  margin: 8rem auto;
+}
 
-  header {
-    margin-bottom: 2rem;
-  }
+code {
+  font-size: 90%;
+  background: #bbb;
+}
 
-  code {
+.subtitle strong {
+  color: #333;
+  font-weight: 500;
+}
+
+.tags {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+
+  li {
+    background: hsl(247, 35%, 96%);
+    color: #6956fe;
+    border-radius: 2px;
+    margin-right: 0.5rem;
     font-size: 90%;
-    background: #bbb;
+    font-weight: 450;
+    line-height: 1;
+    padding: 0.25em 0.5em;
   }
-
-  .tags {}
 }
 </style>

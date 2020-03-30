@@ -2,6 +2,7 @@ import glob from 'glob'
 
 export default {
   mode: 'spa',
+
   /*
    ** Headers of the page
    */
@@ -16,22 +17,24 @@ export default {
         content: process.env.npm_package_description || '',
       },
     ],
-    link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-    ],
+    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
   },
+
   /*
    ** Customize the progress-bar color
    */
   loading: { color: '#fff' },
+
   /*
    ** Global CSS
    */
   css: [],
+
   /*
    ** Plugins to load before mounting the App
    */
   plugins: [],
+
   /*
    ** Nuxt.js dev-modules
    */
@@ -40,10 +43,12 @@ export default {
     // Doc: https://github.com/nuxt-community/stylelint-module
     '@nuxtjs/stylelint-module',
   ],
+
   /*
    ** Nuxt.js modules
    */
   modules: [],
+
   /*
    ** Build configuration
    */
@@ -58,8 +63,12 @@ export default {
       })
     },
   },
+
+  /**
+   * Generate additional pages when building this app
+   */
   generate: {
-    routes: function() {
+    routes: function () {
       return glob.sync('**/*.md', { cwd: 'articles' }).map((path) => {
         const slug = path.substr(0, path.lastIndexOf('.'))
         return `/blog/${slug}`
